@@ -36,3 +36,7 @@ that never produces an HTTP response at all.
 Returning `{ success: false, error }` from a validator (instead of throwing) lets the
 route decide the HTTP status itself — a 502 here means "our server got a bad answer
 from an upstream service (Gemini)," which is a more accurate status than a generic 500.
+
+Feeding a validation error back into the same prompt as `previousError` and asking
+once more fixes flaky LLM output without an infinite loop; errors that a re-ask can't
+fix (rate limits, bad config) skip that path and map straight to their own HTTP status.
