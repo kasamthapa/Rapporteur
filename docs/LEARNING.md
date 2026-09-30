@@ -14,3 +14,8 @@ TypeScript `interface extends` lets `Decision`, `ActionItem`, and `OffAgendaEntr
 all share the same `evidenceQuote`/`sourceLine`/`agendaItem` fields from one
 `EvidenceRef` base, so the "every claim needs a traceable source line" rule is
 enforced by the type system rather than repeated by hand in three places.
+
+A prompt is the real "contract" between your code and an LLM: since the model has
+no compiler, every rule you'd normally enforce with types (exact field names, enum
+values, no extra prose) has to be spelled out in plain English instead — the zod
+schema on the way back in is what actually catches it if the model ignores you.
