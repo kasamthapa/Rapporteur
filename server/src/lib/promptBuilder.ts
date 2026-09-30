@@ -16,7 +16,7 @@ export function buildPrompt(
 
   const agendaSection = agendaGiven
     ? `The agenda was given by the user. Set "agendaGiven": true and "agendaInferred": false. The "agenda" field in your output must be exactly this list, in this order:\n${agenda!.map((t) => `- ${t}`).join("\n")}`
-    : `No agenda was given. You must infer 3 to 7 short topics (a few words each) that cover what was actually discussed, and put them in the "agenda" field. Set "agendaGiven": false and "agendaInferred": true.`;
+    : `No agenda was given. Infer 3 to 7 short topics covering the main business of the meeting. Casual talk (food, greetings, jokes, scheduling chit-chat) is NOT a topic and must go in offAgenda. Put the inferred topics in the "agenda" field. Set "agendaGiven": false and "agendaInferred": true.`;
 
   return `You are generating structured meeting notes for a meeting titled "${title}".
 
