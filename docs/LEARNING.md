@@ -27,3 +27,12 @@ the app still has to `JSON.parse()` it and separately validate the shape.
 Custom `Error` subclasses (e.g. `GeminiRateLimitError` vs `GeminiApiError`) let a
 caller use `instanceof` to react differently to each failure (retry-with-delay vs.
 fail-fast) instead of parsing a generic error message string to guess what went wrong.
+
+In an async Express route, a thrown error inside the handler does NOT automatically
+reach the `(err, req, res, next)` middleware on Express 4 — you have to `try/catch`
+it yourself and call `next(err)`, otherwise it becomes an unhandled promise rejection
+that never produces an HTTP response at all.
+
+Returning `{ success: false, error }` from a validator (instead of throwing) lets the
+route decide the HTTP status itself — a 502 here means "our server got a bad answer
+from an upstream service (Gemini)," which is a more accurate status than a generic 500.
