@@ -8,3 +8,4 @@ node_modules/
 .env.production
 *.log
 .vercel
+.claude/hooks/.capture-state/

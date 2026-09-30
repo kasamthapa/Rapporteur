@@ -24,7 +24,7 @@
   and a clear empty state.
 - Annoyance: the live in-call overlay was a big black box floating on my screen
   during the meeting, and the bot stayed visibly in the call. I'd make it small
-  and translucent, closer to a Siri-style compact indicator. We cut the live
+  and translucent, closer to a Siri-style compact indicator. We cut the live`
   capture layer, so this is out of scope — but it's the reason the no-bot,
   after-the-meeting approach is a real product decision, not only a shortcut.
 
