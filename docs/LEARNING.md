@@ -19,3 +19,11 @@ A prompt is the real "contract" between your code and an LLM: since the model ha
 no compiler, every rule you'd normally enforce with types (exact field names, enum
 values, no extra prose) has to be spelled out in plain English instead — the zod
 schema on the way back in is what actually catches it if the model ignores you.
+
+`responseMimeType: "application/json"` tells Gemini to constrain its own output
+to valid JSON syntax — but "valid JSON" isn't the same as "matches our schema", so
+the app still has to `JSON.parse()` it and separately validate the shape.
+
+Custom `Error` subclasses (e.g. `GeminiRateLimitError` vs `GeminiApiError`) let a
+caller use `instanceof` to react differently to each failure (retry-with-delay vs.
+fail-fast) instead of parsing a generic error message string to guess what went wrong.
