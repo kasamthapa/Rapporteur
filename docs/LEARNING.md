@@ -40,3 +40,11 @@ from an upstream service (Gemini)," which is a more accurate status than a gener
 Feeding a validation error back into the same prompt as `previousError` and asking
 once more fixes flaky LLM output without an infinite loop; errors that a re-ask can't
 fix (rate limits, bad config) skip that path and map straight to their own HTTP status.
+
+Input validation that returns a plain `string | ValidatedInput` instead of throwing
+keeps the route's control flow simple (`if (typeof result === "string")`) and makes
+the function trivially testable without a mocked request/response.
+
+Validating request shape before any expensive or billed call (Gemini, in this case)
+means a malformed request fails in milliseconds with a precise field-level reason,
+instead of wasting a rate-limited API call on input that could never have succeeded.
