@@ -1,7 +1,4 @@
 import { z } from "zod";
-import type { MeetingResult } from "../types/meeting.js";
-
-type LlmMeetingResult = Omit<MeetingResult, "meta">;
 
 const evidenceRefSchema = z.object({
   evidenceQuote: z.string().min(1),
@@ -48,6 +45,10 @@ const llmMeetingResultSchema = z.object({
   agendaCoverage: z.array(agendaCoverageEntrySchema),
 });
 
+// The model's raw output shape — distinct from MeetingResult, which adds
+// server-only fields (verified, meta) the model never produces.
+export type LlmMeetingResult = z.infer<typeof llmMeetingResultSchema>;
+
 function checkAgendaTopics(
   data: LlmMeetingResult,
   requestAgenda: string[],
@@ -91,7 +92,7 @@ export function validateLlmResult(
     return { success: false, error };
   }
 
-  const data = parsed.data as LlmMeetingResult;
+  const data = parsed.data;
   const topicErrors = checkAgendaTopics(data, requestAgenda);
   if (topicErrors.length > 0) {
     return { success: false, error: topicErrors.join("; ") };

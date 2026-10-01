@@ -48,3 +48,13 @@ the function trivially testable without a mocked request/response.
 Validating request shape before any expensive or billed call (Gemini, in this case)
 means a malformed request fails in milliseconds with a precise field-level reason,
 instead of wasting a rate-limited API call on input that could never have succeeded.
+
+Deriving a type from its zod schema with `z.infer<typeof schema>` (instead of hand-writing
+it as an `Omit<>` of a bigger type) keeps the "what the model actually outputs" type locked
+to the runtime check — if the schema and the type ever drifted apart, `z.infer` makes that
+impossible by construction.
+
+Trusting a string match is not the same as trusting the data: `evidenceQuote` only becomes
+"verified" after the server independently re-reads the transcript line the model claimed
+and confirms the exact text is really there — the model asserting a line number proves nothing
+on its own.

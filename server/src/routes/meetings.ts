@@ -8,8 +8,9 @@ import {
   generateMeetingJson,
 } from "../lib/gemini.js";
 import { buildPrompt } from "../lib/promptBuilder.js";
-import { validateLlmResult } from "../lib/resultSchema.js";
+import { validateLlmResult, type LlmMeetingResult } from "../lib/resultSchema.js";
 import { parseTranscript } from "../lib/transcriptParser.js";
+import { verifyEvidence } from "../lib/verifyEvidence.js";
 import type { MeetingResult, ParsedLine } from "../types/meeting.js";
 
 export const meetingsRouter = Router();
@@ -107,7 +108,6 @@ function validateMeetingInput(body: unknown): ValidatedInput | string {
   return { title: trimmedTitle, transcript, agenda: normalizedAgenda };
 }
 
-type LlmMeetingResult = Omit<MeetingResult, "meta">;
 type GenerationAttempt =
   | { success: true; data: LlmMeetingResult }
   | { success: false; error: string };
@@ -181,11 +181,24 @@ meetingsRouter.post("/", async (req, res, next) => {
           agenda: attempt.data.agenda.filter((item) => item !== "Off-agenda"),
         };
 
+    const verified = verifyEvidence(normalized, lines);
+    const verifiedCount =
+      verified.decisions.filter((d) => d.verified).length +
+      verified.actionItems.filter((a) => a.verified).length +
+      verified.offAgenda.filter((o) => o.verified).length;
+    const unverifiedCount =
+      verified.decisions.length +
+      verified.actionItems.length +
+      verified.offAgenda.length -
+      verifiedCount;
+
     const result: MeetingResult = {
-      ...normalized,
+      ...verified,
       meta: {
         transcriptLineCount: lines.length,
         generatedAt: new Date().toISOString(),
+        verifiedCount,
+        unverifiedCount,
       },
     };
 

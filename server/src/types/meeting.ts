@@ -12,6 +12,7 @@ export interface EvidenceRef {
   evidenceQuote: string;
   sourceLine: number; // ParsedLine.lineNumber this quote is copied verbatim from
   agendaItem: string; // one of the agenda topics, or "Off-agenda"
+  verified: boolean; // server-checked: does sourceLine's text actually contain evidenceQuote
 }
 
 export interface Decision extends EvidenceRef {
@@ -54,5 +55,7 @@ export interface MeetingResult {
   meta: {
     transcriptLineCount: number;
     generatedAt: string;
+    verifiedCount: number;
+    unverifiedCount: number;
   };
 }
