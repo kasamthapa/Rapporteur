@@ -1,8 +1,13 @@
 import { useRef, useState } from "react";
 import type { ReactNode, RefObject } from "react";
+import "@fontsource/instrument-serif/latin-400.css";
+import "@fontsource-variable/inter/wght.css";
+import "@fontsource/jetbrains-mono/latin-400.css";
+import "@fontsource/jetbrains-mono/latin-500.css";
 import "./Landing.css";
 import { FloatingWindow } from "./FloatingWindow";
 import { WindowChrome } from "./WindowChrome";
+import { Logo } from "./Logo";
 import { FolderIcon, TrashIcon, Emoticon } from "./Doodles";
 import {
   useClock,
@@ -101,7 +106,9 @@ export function Landing({ onTryDemo, onPasteTranscript }: LandingProps) {
 
       {/* 1. menubar */}
       <header className="menubar">
-        <span className="menubar-wordmark">rapporteur</span>
+        <Logo
+          onClick={() => window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" })}
+        />
         <nav className="menubar-nav" aria-label="Page sections">
           <button type="button" className="menubar-link" onClick={() => scrollTo(howRef)}>
             how it works
@@ -286,6 +293,7 @@ export function Landing({ onTryDemo, onPasteTranscript }: LandingProps) {
       {/* 5. how it works */}
       <section className="section" ref={howRef}>
         <FadeUp>
+          <p className="eyebrow">walkthrough</p>
           <h2 className="section-title">how it works</h2>
           <div className="how-grid">
             <div className="how-card">
@@ -334,6 +342,7 @@ export function Landing({ onTryDemo, onPasteTranscript }: LandingProps) {
       {/* 6. what's built / not built */}
       <section className="section" ref={builtRef}>
         <FadeUp>
+          <p className="eyebrow">status</p>
           <h2 className="section-title">what's built, what's not</h2>
           <WindowChrome accent="sand" caption="status.txt" ariaLabel="what is built and what is not built">
             <div className="built-grid">
@@ -367,6 +376,7 @@ export function Landing({ onTryDemo, onPasteTranscript }: LandingProps) {
       {/* 7. faq */}
       <section className="section" ref={faqRef}>
         <FadeUp>
+          <p className="eyebrow">questions</p>
           <h2 className="section-title">faq</h2>
           <div>
             {faqItems.map((item, i) => {
