@@ -1,17 +1,28 @@
 import { useState } from "react";
+import { Landing } from "./components/landing/Landing";
 import { MeetingsList } from "./components/MeetingsList";
 import { MeetingView } from "./components/MeetingView";
 import { NewMeetingForm } from "./components/NewMeetingForm";
 import type { CreateMeetingResponse } from "./api/meetings";
 
 type View =
+  | { kind: "landing" }
   | { kind: "list" }
   | { kind: "new" }
   | { kind: "meeting"; meetingId: string }
   | { kind: "created"; created: CreateMeetingResponse };
 
 function App() {
-  const [view, setView] = useState<View>({ kind: "list" });
+  const [view, setView] = useState<View>({ kind: "landing" });
+
+  if (view.kind === "landing") {
+    return (
+      <Landing
+        onTryDemo={() => setView({ kind: "list" })}
+        onPasteTranscript={() => setView({ kind: "new" })}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900">
