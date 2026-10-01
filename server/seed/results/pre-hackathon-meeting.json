@@ -1,0 +1,140 @@
+{
+  "id": "pre-hackathon-meeting",
+  "title": "Pre hackathon meeting",
+  "createdAt": "2026-10-01T03:37:34.893Z",
+  "result": {
+    "meetingTitle": "Pre hackathon meeting",
+    "agendaGiven": true,
+    "agendaInferred": false,
+    "agenda": [
+      "project concept",
+      "roles and responsibilities",
+      "strategy"
+    ],
+    "summaryByAgendaItem": [
+      {
+        "agendaItem": "project concept",
+        "summary": "The team discussed their fintech middleware project that connects merchants with banks to enable collateral-free loans. The system utilizes psychological questions, external payment accounts like eSewa and electricity bills, and a community vouching mechanism to generate credit scores. An offline, locally hosted LLM summarizes applicant details for bank managers, while an ML model trained on synthetic and real data performs fraud detection and cluster analysis without making automatic approval decisions."
+      },
+      {
+        "agendaItem": "roles and responsibilities",
+        "summary": "Pawan was acknowledged as the team leader guiding the overall vision, while Samrat was recognized as the technical lead responsible for turning plans into working code and architecture."
+      },
+      {
+        "agendaItem": "strategy",
+        "summary": "The team outlined their hackathon timeline: conducting separate individual research for the first three hours starting Friday, synthesizing ideas into an agreed plan, building the MVP during the initial sprint, and allocating substantial time to presentation and question preparation. They also decided to actively consult mentors from the first day to identify flaws early and defend their core concept."
+      }
+    ],
+    "decisions": [
+      {
+        "evidenceQuote": "there are three tracks in the hackathon and among them we are choosing to build on fintech",
+        "sourceLine": 2,
+        "agendaItem": "project concept",
+        "text": "Build a fintech middleware project connecting merchants and banks for collateral-free loans.",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "we will have our own local LLM which will for the security to summarize everything",
+        "sourceLine": 182,
+        "agendaItem": "project concept",
+        "text": "Run a local offline LLM to summarize applicant data securely without leaking bank information.",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "our top most and the most important uh priority would be given for presentation.",
+        "sourceLine": 50,
+        "agendaItem": "strategy",
+        "text": "Prioritize presentation preparation as the top strategy for winning the hackathon.",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "So let's use mentors as much as possible even in the first day.",
+        "sourceLine": 270,
+        "agendaItem": "strategy",
+        "text": "Engage and consult mentors as early as the first day to validate and defend the project.",
+        "verified": false
+      }
+    ],
+    "actionItems": [
+      {
+        "evidenceQuote": "Search more on this and then we prepare on the concrete answers.",
+        "sourceLine": 46,
+        "agendaItem": "project concept",
+        "text": "Research and prepare concrete answers regarding how the system guarantees loan repayment and establishes trust.",
+        "owner": "unassigned",
+        "deadline": "none",
+        "status": "suggested",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "for a few hours, we will do individually, like no disturbance to each other.",
+        "sourceLine": 75,
+        "agendaItem": "strategy",
+        "text": "Conduct individual separate research for the first few hours on Friday morning before coming together.",
+        "owner": "unassigned",
+        "deadline": "Friday morning",
+        "status": "committed",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "on day two we have to anyhow turn the plan into product, yeah, then after that, within a half day",
+        "sourceLine": 80,
+        "agendaItem": "strategy",
+        "text": "Turn the researched plan into a working product within half a day on day two.",
+        "owner": "unassigned",
+        "deadline": "day two",
+        "status": "committed",
+        "verified": true
+      }
+    ],
+    "offAgenda": [
+      {
+        "evidenceQuote": "I will be bringing some noodles, biscuits, and something.",
+        "sourceLine": 62,
+        "agendaItem": "Off-agenda",
+        "text": "Samrat committed to bringing noodles, biscuits, and snacks for the hackathon.",
+        "kind": "action",
+        "owner": "Samrat Ghimire",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "I think I am planning to take one induction and frozen momo.",
+        "sourceLine": 63,
+        "agendaItem": "Off-agenda",
+        "text": "Pawan planned to bring an induction stove and frozen momo to the event.",
+        "kind": "action",
+        "owner": "Pawan Pokharel",
+        "verified": true
+      },
+      {
+        "evidenceQuote": "I will bring Dalmat. Do not?",
+        "sourceLine": 66,
+        "agendaItem": "Off-agenda",
+        "text": "Pawan offered to bring dalmot snacks from his shop.",
+        "kind": "action",
+        "owner": "Pawan Pokharel",
+        "verified": true
+      }
+    ],
+    "agendaCoverage": [
+      {
+        "item": "project concept",
+        "discussed": true
+      },
+      {
+        "item": "roles and responsibilities",
+        "discussed": true
+      },
+      {
+        "item": "strategy",
+        "discussed": true
+      }
+    ],
+    "meta": {
+      "transcriptLineCount": 284,
+      "generatedAt": "2026-10-01T03:37:34.893Z",
+      "verifiedCount": 9,
+      "unverifiedCount": 1
+    }
+  }
+}
