@@ -431,23 +431,20 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
           </details>
         </section>
 
-        <section
-          aria-label="Transcript"
-          className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto"
-        >
-          <div className="mv-window">
-            <div className="mv-window-bar">
+        <section aria-label="Transcript" className="lg:sticky lg:top-6">
+          <div className="mv-window lg:flex lg:max-h-[calc(100vh-3rem)] lg:flex-col">
+            <div className="mv-window-bar lg:shrink-0">
               <WindowDots />
               <span className="mv-window-caption">transcript.txt</span>
               <span className="mv-window-title-spacer" aria-hidden="true" />
             </div>
-            <div className="mv-window-body">
+            <div className="mv-window-body lg:flex lg:min-h-0 lg:flex-col">
               <h2 className="sr-only">Transcript</h2>
 
               <div
                 role="group"
                 aria-label="Filter transcript by speaker"
-                className="flex flex-wrap gap-2"
+                className="flex flex-wrap gap-2 lg:shrink-0"
               >
                 {speakers.map((speaker) => {
                   const active = enabledSpeakers.has(speaker);
@@ -465,7 +462,7 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
                 })}
               </div>
 
-              <ol className="mt-3 flex flex-col gap-2">
+              <ol className="mt-3 flex flex-col gap-2 lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:pr-1">
                 {result.transcriptLines.map((line) => {
                   const isHighlighted = line.lineNumber === highlightedLine;
                   const visible = enabledSpeakers.has(line.speaker) || isHighlighted;
