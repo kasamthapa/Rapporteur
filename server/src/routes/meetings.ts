@@ -1,4 +1,7 @@
 import { randomUUID } from "node:crypto";
+import { readdirSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { Router } from "express";
 import {
   analyzeMeeting,
@@ -10,8 +13,100 @@ import {
   GeminiConfigError,
   GeminiRateLimitError,
 } from "../lib/gemini.js";
+import type { MeetingResult } from "../types/meeting.js";
 
 export const meetingsRouter = Router();
+
+const MEETING_ID_REGEX = /^[a-z0-9-]+$/;
+
+interface SeedMeetingFile {
+  id: string;
+  title: string;
+  createdAt: string;
+  result: MeetingResult;
+}
+
+interface MeetingSummary {
+  id: string;
+  title: string;
+  createdAt: string;
+  counts: {
+    decisions: number;
+    actionItems: number;
+    offAgenda: number;
+    verified: number;
+    unverified: number;
+  };
+}
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const SEED_RESULTS_DIR = path.join(__dirname, "..", "..", "seed", "results");
+
+function loadSeedMeetings(): SeedMeetingFile[] {
+  let filenames: string[];
+  try {
+    filenames = readdirSync(SEED_RESULTS_DIR).filter((f) => f.endsWith(".json"));
+  } catch (err) {
+    console.error(`failed to read seed results directory ${SEED_RESULTS_DIR}:`, err);
+    return [];
+  }
+
+  const meetings: SeedMeetingFile[] = [];
+  for (const filename of filenames) {
+    const filePath = path.join(SEED_RESULTS_DIR, filename);
+    try {
+      meetings.push(JSON.parse(readFileSync(filePath, "utf-8")) as SeedMeetingFile);
+    } catch (err) {
+      console.error(`failed to load seed meeting file ${filename}:`, err);
+    }
+  }
+  return meetings;
+}
+
+const seedMeetings = loadSeedMeetings();
+console.log(`loaded ${seedMeetings.length} seed meeting(s) from ${SEED_RESULTS_DIR}`);
+
+const seedMeetingsById = new Map(seedMeetings.map((m) => [m.id, m]));
+
+meetingsRouter.get("/", (_req, res) => {
+  const list: MeetingSummary[] = seedMeetings
+    .map((m) => ({
+      id: m.id,
+      title: m.title,
+      createdAt: m.createdAt,
+      counts: {
+        decisions: m.result.decisions.length,
+        actionItems: m.result.actionItems.length,
+        offAgenda: m.result.offAgenda.length,
+        verified: m.result.meta.verifiedCount,
+        unverified: m.result.meta.unverifiedCount,
+      },
+    }))
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+
+  res.status(200).json(list);
+});
+
+meetingsRouter.get("/:id", (req, res) => {
+  const { id } = req.params;
+  if (!MEETING_ID_REGEX.test(id)) {
+    res.status(400).json({ error: "invalid meeting id" });
+    return;
+  }
+
+  const meeting = seedMeetingsById.get(id);
+  if (meeting === undefined) {
+    res.status(404).json({ error: "meeting not found" });
+    return;
+  }
+
+  res.status(200).json({
+    id: meeting.id,
+    title: meeting.title,
+    createdAt: meeting.createdAt,
+    result: meeting.result,
+  });
+});
 
 const TITLE_MAX_LENGTH = 200;
 const TRANSCRIPT_MAX_LENGTH = 200_000;

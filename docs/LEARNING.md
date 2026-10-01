@@ -66,3 +66,11 @@ drift out of shape from what a real request would produce.
 Checking "does the output file already exist" before spending a billed API call is a cheap,
 file-system-only guard that makes a multi-step script safely re-runnable — a crash on entry 3
 of 5 means re-running only redoes entry 3 onward, instead of re-paying for 1 and 2 again.
+
+Loading the seed JSON files once at server startup (into an array and a `Map` by id) instead
+of reading the filesystem inside each route handler means every `GET /meetings` request is
+just an in-memory lookup — no disk I/O, and nothing to race if two requests arrive at once.
+
+Rejecting a URL param against a strict `a-z0-9-` regex before using it as a lookup key blocks
+path-traversal-shaped ids (like `../../etc/passwd`) with a clean 400 — the check happens before
+the value is ever used to touch storage, not after something has already gone wrong.
