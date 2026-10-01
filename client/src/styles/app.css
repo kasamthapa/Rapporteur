@@ -445,6 +445,25 @@ details[open] > .mv-window-summary .mv-window-chevron {
   resize: vertical;
 }
 
+.link-muted {
+  display: inline-flex;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: var(--fs-xs);
+  color: var(--color-ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  cursor: pointer;
+  transition: color var(--duration-fast) ease, text-decoration-color var(--duration-fast) ease;
+}
+
+.link-muted:hover {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-ink);
+}
+
 /* ---------- misc text ---------- */
 .heading-serif {
   font-family: var(--font-display);

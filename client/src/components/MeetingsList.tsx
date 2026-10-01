@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ApiError, listMeetings } from "../api/meetings";
+import { clearLocalMeetings, listLocalMeetings, type LocalMeetingRecord } from "../local/localMeetings";
 import type { MeetingSummary } from "../types/meeting";
 
 function FolderIcon() {
@@ -23,6 +24,7 @@ function FolderIcon() {
 
 interface MeetingsListProps {
   onOpenMeeting: (id: string) => void;
+  onOpenLocalMeeting: (record: LocalMeetingRecord) => void;
   onNewMeeting: () => void;
 }
 
@@ -49,8 +51,16 @@ function countsLabel(counts: MeetingSummary["counts"]): string {
   return [decisions, actions, verified, unverified].join(", ");
 }
 
-export function MeetingsList({ onOpenMeeting, onNewMeeting }: MeetingsListProps) {
+export function MeetingsList({ onOpenMeeting, onOpenLocalMeeting, onNewMeeting }: MeetingsListProps) {
   const [state, setState] = useState<LoadState>({ status: "loading" });
+  const [localMeetings, setLocalMeetings] = useState<LocalMeetingRecord[]>(() =>
+    listLocalMeetings(),
+  );
+
+  const handleClearLocal = () => {
+    clearLocalMeetings();
+    setLocalMeetings([]);
+  };
 
   const load = () => {
     setState({ status: "loading" });
@@ -75,6 +85,47 @@ export function MeetingsList({ onOpenMeeting, onNewMeeting }: MeetingsListProps)
         </button>
       </div>
 
+      {localMeetings.length > 0 && (
+        <div className="mb-6">
+          <ul className="flex flex-col gap-3">
+            {localMeetings.map((meeting) => (
+              <li key={meeting.id}>
+                <button
+                  type="button"
+                  onClick={() => onOpenLocalMeeting(meeting)}
+                  className="ml-row"
+                >
+                  <FolderIcon />
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-baseline justify-between gap-3">
+                      <h2 className="ml-row-title truncate">{meeting.title}</h2>
+                      <span className="shrink-0 text-xs text-soft">
+                        {formatDate(meeting.createdAt)}
+                      </span>
+                    </div>
+                    <div className="mt-1 flex flex-wrap items-center gap-2">
+                      <p className="ml-row-meta">
+                        {countsLabel({
+                          decisions: meeting.result.decisions.length,
+                          actionItems: meeting.result.actionItems.length,
+                          offAgenda: meeting.result.offAgenda.length,
+                          verified: meeting.result.meta.verifiedCount,
+                          unverified: meeting.result.meta.unverifiedCount,
+                        })}
+                      </p>
+                      <span className="tag tag-neutral">yours · this browser only</span>
+                    </div>
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+          <button type="button" onClick={handleClearLocal} className="link-muted mt-2">
+            clear my meetings
+          </button>
+        </div>
+      )}
+
       {state.status === "loading" && (
         <p className="text-sm text-soft">Loading meetings…</p>
       )}
@@ -88,7 +139,7 @@ export function MeetingsList({ onOpenMeeting, onNewMeeting }: MeetingsListProps)
         </div>
       )}
 
-      {state.status === "loaded" && state.meetings.length === 0 && (
+      {state.status === "loaded" && state.meetings.length === 0 && localMeetings.length === 0 && (
         <div className="mv-window p-6 text-center">
           <p className="text-sm text-soft">No meetings yet.</p>
         </div>
