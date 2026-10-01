@@ -1,0 +1,498 @@
+/* Visual styles for app views (meetings list, new meeting form, meeting view).
+   Uses tokens from ./tokens.css. Independent from components/landing/Landing.css. */
+
+.app-shell {
+  position: relative;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-ui);
+  color: var(--color-ink);
+  background-color: var(--color-bg);
+  background-image: var(--paper-grain), var(--paper-rules);
+  background-repeat: repeat, repeat;
+  background-size: 180px 180px, 100% 28px;
+}
+
+.app-shell * {
+  box-sizing: border-box;
+}
+
+.app-shell a:focus-visible,
+.app-shell button:focus-visible,
+.app-shell input:focus-visible,
+.app-shell textarea:focus-visible,
+.app-shell [tabindex]:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- top bar ---------- */
+.app-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(247, 241, 227, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--color-ink);
+  font-size: var(--fs-sm);
+}
+
+.app-topbar-nav {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.app-nav-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-soft);
+  font: inherit;
+  padding: 4px 2px;
+  transition: color var(--duration-fast) ease;
+}
+
+.app-nav-link:hover {
+  color: var(--color-ink);
+}
+
+.app-main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- buttons ---------- */
+.btn-flat {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--color-ink);
+  color: #fdf8ec;
+  border: 1.5px solid var(--color-ink);
+  transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease,
+    background-color var(--duration-fast) ease, opacity var(--duration-fast) ease;
+}
+
+.btn-flat:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+  box-shadow: 3px 3px 0 var(--color-accent);
+}
+
+.btn-flat:active:not(:disabled) {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.btn-flat:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn-flat-secondary {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.btn-flat-secondary:hover:not(:disabled) {
+  background: var(--color-cream-dark);
+}
+
+.btn-flat-danger {
+  background: transparent;
+  color: #9c3a3a;
+  border-color: #c98f8f;
+}
+
+.btn-flat-danger:hover:not(:disabled) {
+  background: #f6e6e6;
+}
+
+.btn-flat-sm {
+  padding: 6px 12px;
+  font-size: var(--fs-xs);
+  border-radius: var(--radius-sm);
+}
+
+.btn-evidence {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-2xs);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--color-paper);
+  color: var(--color-ink-soft);
+  border: 1.5px solid var(--color-line);
+  transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease,
+    background-color var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+
+.btn-evidence:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 var(--color-accent);
+  border-color: var(--color-ink);
+}
+
+.btn-evidence:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+.btn-evidence.is-active {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+  background: var(--color-accent);
+}
+
+/* ---------- badges / tags ---------- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-2xs);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.tag-green {
+  background: var(--color-pastel-green);
+}
+
+.tag-amber {
+  background: var(--color-pastel-sand);
+}
+
+.tag-blue {
+  background: var(--color-pastel-blue);
+}
+
+.tag-neutral {
+  background: var(--color-cream-dark);
+  color: var(--color-ink-soft);
+}
+
+/* ---------- chips (speaker filter / agenda topics) ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  cursor: pointer;
+  background: var(--color-paper);
+  color: var(--color-ink-soft);
+  border: 1.5px solid var(--color-line);
+  transition: background-color var(--duration-fast) ease, color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.chip.is-active {
+  background: var(--color-ink);
+  color: #fdf8ec;
+  border-color: var(--color-ink);
+}
+
+.chip-removable {
+  background: var(--color-pastel-sand);
+  color: var(--color-ink);
+  border-color: transparent;
+  cursor: default;
+}
+
+.chip-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: var(--fs-sm);
+  line-height: 1;
+  padding: 0;
+}
+
+/* ---------- windows (meeting view cards) ---------- */
+.mv-window {
+  background: var(--color-paper);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.mv-window-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: var(--mv-accent, var(--color-pastel-sand));
+  border-bottom: 1px solid var(--color-line);
+}
+
+.mv-window-dots {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.mv-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.mv-dot-red {
+  background: #ff5f57;
+}
+
+.mv-dot-yellow {
+  background: #febc2e;
+}
+
+.mv-dot-green {
+  background: #28c840;
+}
+
+.mv-window-title {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  line-height: var(--lh-display);
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mv-window-title-spacer {
+  width: 46px;
+  flex-shrink: 0;
+}
+
+.mv-window-caption {
+  flex: 1;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-ink-soft);
+}
+
+.mv-window-body {
+  padding: var(--space-3);
+}
+
+/* native <summary> acting as a window title bar */
+.mv-window-summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.mv-window-summary::-webkit-details-marker {
+  display: none;
+}
+
+.mv-window-chevron {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--color-ink-soft);
+  border-bottom: 2px solid var(--color-ink-soft);
+  transform: rotate(-45deg);
+  transition: transform var(--duration-fast) ease;
+}
+
+details[open] > .mv-window-summary .mv-window-chevron {
+  transform: rotate(45deg);
+}
+
+.mv-card {
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-line);
+  padding: var(--space-2);
+  background: var(--color-paper);
+}
+
+.mv-section-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+/* ---------- transcript panel ---------- */
+.mv-line {
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  transition: background-color var(--duration-slow) ease;
+}
+
+.mv-line.is-highlighted {
+  background-color: var(--color-accent);
+}
+
+.mv-line-meta {
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--color-ink-soft);
+}
+
+.mv-line-text {
+  margin-top: 2px;
+  color: var(--color-ink);
+}
+
+/* ---------- meetings list ---------- */
+.ml-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-line);
+  background: var(--color-paper);
+  text-align: left;
+  cursor: pointer;
+  transition: transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease,
+    border-color var(--duration-fast) ease;
+}
+
+.ml-row:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-ink);
+}
+
+.ml-row-icon {
+  flex-shrink: 0;
+}
+
+.ml-row-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-md);
+  color: var(--color-ink);
+}
+
+.ml-row-meta {
+  color: var(--color-ink-soft);
+  font-size: var(--fs-sm);
+}
+
+/* ---------- form fields ---------- */
+.field-label {
+  display: block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.field-hint {
+  margin-top: 4px;
+  font-size: var(--fs-xs);
+  color: var(--color-ink-soft);
+}
+
+.field-input {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--color-line);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-size: var(--fs-sm);
+  font-family: inherit;
+  transition: border-color var(--duration-fast) ease;
+}
+
+.field-input:focus {
+  border-color: var(--color-ink);
+}
+
+.field-input:disabled {
+  cursor: not-allowed;
+  background: var(--color-cream-dark);
+}
+
+.field-textarea {
+  font-family: var(--font-mono);
+  resize: vertical;
+}
+
+/* ---------- misc text ---------- */
+.heading-serif {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+.text-soft {
+  color: var(--color-ink-soft);
+}
+
+.banner {
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+}
+
+.banner-error {
+  border: 1px solid #e3b3b3;
+  background: #faeded;
+  color: #8a2f2f;
+}
+
+.banner-info {
+  border: 1px solid var(--color-line);
+  background: var(--color-pastel-blue);
+  color: var(--color-ink);
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .app-shell * {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .btn-flat,
+  .btn-evidence,
+  .ml-row,
+  .chip,
+  .mv-line,
+  .mv-window-chevron {
+    transition: none !important;
+  }
+
+  .btn-flat:hover:not(:disabled),
+  .btn-evidence:hover,
+  .ml-row:hover {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,70 @@
+/* Shared design tokens for app views (meetings list, new meeting form, meeting view).
+   Mirrors the values in components/landing/Landing.css's .landing scope.
+   Duplicated intentionally, not imported from Landing.css, so the landing page's
+   styles are never touched by app-view work. */
+:root {
+  --font-display: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter Variable", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 80px;
+  --space-section: 48px;
+
+  --fs-2xs: 11px;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 17px;
+  --fs-md: 19px;
+  --fs-lg: 24px;
+  --fs-xl: 32px;
+  --fs-2xl: 48px;
+  --fs-hero: clamp(64px, 11vw, 144px);
+
+  --lh-display: 1;
+  --lh-snug: 1.35;
+  --lh-ui: 1.5;
+  --lh-body: 1.6;
+
+  --duration-fast: 150ms;
+  --duration-base: 320ms;
+  --duration-slow: 700ms;
+
+  --color-bg: #f7f1e3;
+  --color-ink: #1c2541;
+  --color-ink-soft: #525b70;
+  --color-line: rgba(28, 37, 65, 0.14);
+  --color-paper: #fffbf2;
+  --color-cream-dark: #efe4cc;
+
+  --color-ink-pill-top: #46527a;
+  --color-ink-pill-dark: #10152a;
+  --color-accent: #ffe66d;
+  --color-accent-dark: #e8b923;
+  --color-margin: #d6646f;
+  --color-manila: #e3d3a3;
+
+  --color-pastel-green: #d7e0c9;
+  --color-pastel-blue: #cfd9e3;
+  --color-pastel-pink: #e8d2cf;
+  --color-pastel-teal: #c9ddd3;
+  --color-pastel-sand: #ead9b8;
+
+  --shadow-sm: 0 1px 2px rgba(48, 36, 18, 0.08), 0 1px 1px rgba(48, 36, 18, 0.05);
+  --shadow-md: 0 6px 16px rgba(48, 36, 18, 0.12), 0 2px 6px rgba(48, 36, 18, 0.08);
+  --shadow-lg: 0 20px 40px rgba(48, 36, 18, 0.18), 0 8px 18px rgba(48, 36, 18, 0.1);
+
+  --paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --paper-rules: repeating-linear-gradient(to bottom, transparent 0, transparent 27px, var(--color-line) 28px);
+}

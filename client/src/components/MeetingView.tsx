@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import { ApiError, getMeeting } from "../api/meetings";
 import type {
   ActionItem,
@@ -7,6 +8,24 @@ import type {
   MeetingResult,
   ParsedLine,
 } from "../types/meeting";
+
+const WINDOW_ACCENTS = [
+  "var(--color-pastel-green)",
+  "var(--color-pastel-blue)",
+  "var(--color-pastel-pink)",
+  "var(--color-pastel-teal)",
+  "var(--color-pastel-sand)",
+];
+
+function WindowDots() {
+  return (
+    <div className="mv-window-dots" aria-hidden="true">
+      <span className="mv-dot mv-dot-red" />
+      <span className="mv-dot mv-dot-yellow" />
+      <span className="mv-dot mv-dot-green" />
+    </div>
+  );
+}
 
 export type MeetingViewSource =
   | { kind: "id"; id: string }
@@ -62,29 +81,21 @@ export function MeetingView({ source, onBack }: MeetingViewProps) {
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-6">
-      <button
-        type="button"
-        onClick={onBack}
-        className="inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
-      >
+      <button type="button" onClick={onBack} className="btn-flat btn-flat-secondary btn-flat-sm">
         <span aria-hidden="true">←</span> Back to meetings
       </button>
 
       {state.status === "loading" && (
-        <p className="mt-6 text-sm text-gray-500" role="status">
+        <p className="mt-6 text-sm text-soft" role="status">
           Loading meeting…
         </p>
       )}
 
       {state.status === "error" && (
-        <div className="mt-6 rounded-md border border-red-200 bg-red-50 p-4">
-          <p className="text-sm text-red-800">{state.message}</p>
+        <div className="mt-6 banner banner-error">
+          <p className="text-sm">{state.message}</p>
           {source.kind === "id" && (
-            <button
-              type="button"
-              onClick={load}
-              className="mt-3 rounded-md border border-red-300 bg-white px-3 py-1.5 text-sm font-medium text-red-700 hover:bg-red-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
-            >
+            <button type="button" onClick={load} className="btn-flat btn-flat-sm mt-3">
               Retry
             </button>
           )}
@@ -117,32 +128,18 @@ function formatDateTime(iso: string): string {
 
 function VerifiedBadge({ verified }: { verified: boolean }) {
   if (verified) {
-    return (
-      <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-800">
-        Exact words found
-      </span>
-    );
+    return <span className="tag tag-green">Exact words found</span>;
   }
   return (
-    <span className="inline-flex items-center rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-800">
-      Words don't match this line - check the transcript
-    </span>
+    <span className="tag tag-amber">Words don't match this line - check the transcript</span>
   );
 }
 
 function StatusBadge({ status }: { status: ActionItem["status"] }) {
   if (status === "committed") {
-    return (
-      <span className="inline-flex items-center rounded-full bg-teal-50 px-2 py-0.5 text-xs font-medium text-teal-800">
-        Agreed
-      </span>
-    );
+    return <span className="tag tag-blue">Agreed</span>;
   }
-  return (
-    <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700">
-      Proposed
-    </span>
-  );
+  return <span className="tag tag-neutral">Proposed</span>;
 }
 
 function LineButton({
@@ -170,11 +167,7 @@ function LineButton({
       aria-pressed={isHighlighted}
       title={titleLabel}
       aria-label={`${titleLabel} — scroll transcript to this line`}
-      className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-1 ${
-        isHighlighted
-          ? "border-teal-600 bg-teal-50 text-teal-800"
-          : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
-      }`}
+      className={`btn-evidence${isHighlighted ? " is-active" : ""}`}
     >
       {visibleLabel}
     </button>
@@ -194,7 +187,10 @@ function EvidenceBlock({
 }) {
   return (
     <>
-      <blockquote className="mt-2 border-l-2 border-gray-200 pl-3 text-sm italic text-gray-600">
+      <blockquote
+        className="mt-2 pl-3 text-sm italic text-soft"
+        style={{ borderLeft: "2px solid var(--color-line)" }}
+      >
         “{evidence.evidenceQuote}”
       </blockquote>
       <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -301,21 +297,21 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
   return (
     <div>
       <header className="mt-4">
-        <h1 className="text-2xl font-semibold text-gray-900">{title}</h1>
-        <p className="mt-1 text-sm text-gray-500">{formatDateTime(createdAt)}</p>
-        <p className="mt-2 text-sm font-medium text-gray-700">
+        <h1 className="heading-serif text-3xl">{title}</h1>
+        <p className="mt-1 text-sm text-soft">{formatDateTime(createdAt)}</p>
+        <p className="mt-2 text-sm font-medium">
           {totalClaims > 0
             ? `${result.meta.verifiedCount} of ${totalClaims} quotes found word for word`
             : "No verifiable claims in this meeting"}
         </p>
         {totalClaims > 0 && (
-          <p className="mt-1 text-xs text-gray-500">
+          <p className="mt-1 text-xs text-soft">
             Exact words found means the quote appears word for word on the line it cites. It
             does not prove the claim is true.
           </p>
         )}
         {result.agendaInferred && (
-          <p className="mt-3 inline-flex items-center rounded-md bg-blue-50 px-3 py-1.5 text-sm text-blue-800">
+          <p className="banner banner-info mt-3 inline-flex items-center px-3 py-1.5 text-sm">
             Agenda was inferred by the AI
           </p>
         )}
@@ -323,7 +319,7 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
 
       <div className="mt-6 flex flex-col gap-8 lg:grid lg:grid-cols-[1fr_380px] lg:items-start lg:gap-8">
         <section aria-label="Meeting analysis" className="flex flex-col gap-6">
-          {result.agenda.map((item) => {
+          {result.agenda.map((item, idx) => {
             const discussed = coverageByItem.get(item) ?? true;
             const decisions = decisionsByItem.get(item) ?? [];
             const actionItems = actionItemsByItem.get(item) ?? [];
@@ -332,86 +328,92 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
               <section
                 key={item}
                 aria-labelledby={`agenda-${item}`}
-                className="rounded-lg border border-gray-200 bg-white p-4"
+                className="mv-window"
+                style={{ "--mv-accent": WINDOW_ACCENTS[idx % WINDOW_ACCENTS.length] } as CSSProperties}
               >
-                <h2 id={`agenda-${item}`} className="text-lg font-semibold text-gray-900">
-                  {item}
-                </h2>
-                <p className="mt-1 text-sm text-gray-700">{summaryByItem.get(item) ?? ""}</p>
+                <div className="mv-window-bar">
+                  <WindowDots />
+                  <h2 id={`agenda-${item}`} className="mv-window-title">
+                    {item}
+                  </h2>
+                  <span className="mv-window-title-spacer" aria-hidden="true" />
+                </div>
+                <div className="mv-window-body">
+                  <p className="text-sm text-soft">{summaryByItem.get(item) ?? ""}</p>
 
-                {!discussed ? (
-                  <p className="mt-3 text-sm italic text-gray-400">Not discussed</p>
-                ) : decisions.length === 0 && actionItems.length === 0 ? (
-                  <p className="mt-3 text-sm text-gray-500">
-                    No decisions or action items recorded for this topic.
-                  </p>
-                ) : (
-                  <>
-                    {decisions.length > 0 && (
-                      <div className="mt-4">
-                        <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                          Decisions
-                        </h3>
-                        <ul className="mt-2 flex flex-col gap-3">
-                          {decisions.map((d, i) => (
-                            <li key={i} className="rounded-md border border-gray-200 p-3">
-                              <p className="text-sm text-gray-900">{d.text}</p>
-                              <EvidenceBlock
-                                evidence={d}
-                                line={linesByNumber.get(d.sourceLine)}
-                                highlightedLine={highlightedLine}
-                                onGoToLine={goToLine}
-                              />
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                  {!discussed ? (
+                    <p className="mt-3 text-sm italic text-soft">Not discussed</p>
+                  ) : decisions.length === 0 && actionItems.length === 0 ? (
+                    <p className="mt-3 text-sm text-soft">
+                      No decisions or action items recorded for this topic.
+                    </p>
+                  ) : (
+                    <>
+                      {decisions.length > 0 && (
+                        <div className="mt-4">
+                          <h3 className="mv-section-label">Decisions</h3>
+                          <ul className="mt-2 flex flex-col gap-3">
+                            {decisions.map((d, i) => (
+                              <li key={i} className="mv-card">
+                                <p className="text-sm">{d.text}</p>
+                                <EvidenceBlock
+                                  evidence={d}
+                                  line={linesByNumber.get(d.sourceLine)}
+                                  highlightedLine={highlightedLine}
+                                  onGoToLine={goToLine}
+                                />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
 
-                    {actionItems.length > 0 && (
-                      <div className="mt-4">
-                        <h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500">
-                          Action items
-                        </h3>
-                        <ul className="mt-2 flex flex-col gap-3">
-                          {actionItems.map((a, i) => (
-                            <li key={i} className="rounded-md border border-gray-200 p-3">
-                              <p className="text-sm text-gray-900">{a.text}</p>
-                              <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600">
-                                <span>Owner: {a.owner}</span>
-                                <span>Deadline: {a.deadline}</span>
-                                <StatusBadge status={a.status} />
-                              </div>
-                              <EvidenceBlock
-                                evidence={a}
-                                line={linesByNumber.get(a.sourceLine)}
-                                highlightedLine={highlightedLine}
-                                onGoToLine={goToLine}
-                              />
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
-                  </>
-                )}
+                      {actionItems.length > 0 && (
+                        <div className="mt-4">
+                          <h3 className="mv-section-label">Action items</h3>
+                          <ul className="mt-2 flex flex-col gap-3">
+                            {actionItems.map((a, i) => (
+                              <li key={i} className="mv-card">
+                                <p className="text-sm">{a.text}</p>
+                                <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-soft">
+                                  <span>Owner: {a.owner}</span>
+                                  <span>Deadline: {a.deadline}</span>
+                                  <StatusBadge status={a.status} />
+                                </div>
+                                <EvidenceBlock
+                                  evidence={a}
+                                  line={linesByNumber.get(a.sourceLine)}
+                                  highlightedLine={highlightedLine}
+                                  onGoToLine={goToLine}
+                                />
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
               </section>
             );
           })}
 
-          <details className="rounded-lg border border-gray-200 bg-white">
-            <summary className="cursor-pointer select-none px-4 py-3 text-sm font-medium text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600">
-              Off-agenda ({result.offAgenda.length})
+          <details className="mv-window">
+            <summary className="mv-window-bar mv-window-summary">
+              <WindowDots />
+              <span className="mv-window-caption">off-agenda.txt</span>
+              <span className="text-xs text-soft">({result.offAgenda.length})</span>
+              <span className="mv-window-chevron" aria-hidden="true" />
             </summary>
-            <div className="border-t border-gray-100 p-4">
+            <div className="mv-window-body">
               {result.offAgenda.length === 0 ? (
-                <p className="text-sm text-gray-500">No off-agenda talk recorded.</p>
+                <p className="text-sm text-soft">No off-agenda talk recorded.</p>
               ) : (
                 <ul className="flex flex-col gap-3">
                   {result.offAgenda.map((o, i) => (
-                    <li key={i} className="rounded-md border border-gray-200 p-3">
-                      <p className="text-sm text-gray-900">{o.text}</p>
-                      <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-gray-600">
+                    <li key={i} className="mv-card">
+                      <p className="text-sm">{o.text}</p>
+                      <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-soft">
                         <span className="capitalize">{o.kind}</span>
                         <span>Owner: {o.owner}</span>
                       </div>
@@ -433,60 +435,65 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
           aria-label="Transcript"
           className="lg:sticky lg:top-6 lg:max-h-[calc(100vh-3rem)] lg:overflow-y-auto"
         >
-          <h2 className="text-lg font-semibold text-gray-900">Transcript</h2>
+          <div className="mv-window">
+            <div className="mv-window-bar">
+              <WindowDots />
+              <span className="mv-window-caption">transcript.txt</span>
+              <span className="mv-window-title-spacer" aria-hidden="true" />
+            </div>
+            <div className="mv-window-body">
+              <h2 className="sr-only">Transcript</h2>
 
-          <div
-            role="group"
-            aria-label="Filter transcript by speaker"
-            className="mt-3 flex flex-wrap gap-2"
-          >
-            {speakers.map((speaker) => {
-              const active = enabledSpeakers.has(speaker);
-              return (
-                <button
-                  key={speaker}
-                  type="button"
-                  aria-pressed={active}
-                  onClick={() => toggleSpeaker(speaker)}
-                  className={`rounded-full px-3 py-1 text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-1 ${
-                    active ? "bg-teal-600 text-white" : "bg-gray-100 text-gray-500"
-                  }`}
-                >
-                  {speaker}
-                </button>
-              );
-            })}
+              <div
+                role="group"
+                aria-label="Filter transcript by speaker"
+                className="flex flex-wrap gap-2"
+              >
+                {speakers.map((speaker) => {
+                  const active = enabledSpeakers.has(speaker);
+                  return (
+                    <button
+                      key={speaker}
+                      type="button"
+                      aria-pressed={active}
+                      onClick={() => toggleSpeaker(speaker)}
+                      className={`chip${active ? " is-active" : ""}`}
+                    >
+                      {speaker}
+                    </button>
+                  );
+                })}
+              </div>
+
+              <ol className="mt-3 flex flex-col gap-2">
+                {result.transcriptLines.map((line) => {
+                  const isHighlighted = line.lineNumber === highlightedLine;
+                  const visible = enabledSpeakers.has(line.speaker) || isHighlighted;
+                  if (!visible) return null;
+
+                  return (
+                    <li
+                      key={line.lineNumber}
+                      ref={(el) => {
+                        if (el) {
+                          lineRefs.current.set(line.lineNumber, el);
+                        } else {
+                          lineRefs.current.delete(line.lineNumber);
+                        }
+                      }}
+                      id={`transcript-line-${line.lineNumber}`}
+                      className={`mv-line${isHighlighted ? " is-highlighted" : ""}`}
+                    >
+                      <p className="mv-line-meta">
+                        {line.timestamp} · {line.speaker}
+                      </p>
+                      <p className="mv-line-text text-sm">{line.text}</p>
+                    </li>
+                  );
+                })}
+              </ol>
+            </div>
           </div>
-
-          <ol className="mt-3 flex flex-col gap-2 rounded-lg border border-gray-200 bg-white p-3">
-            {result.transcriptLines.map((line) => {
-              const isHighlighted = line.lineNumber === highlightedLine;
-              const visible = enabledSpeakers.has(line.speaker) || isHighlighted;
-              if (!visible) return null;
-
-              return (
-                <li
-                  key={line.lineNumber}
-                  ref={(el) => {
-                    if (el) {
-                      lineRefs.current.set(line.lineNumber, el);
-                    } else {
-                      lineRefs.current.delete(line.lineNumber);
-                    }
-                  }}
-                  id={`transcript-line-${line.lineNumber}`}
-                  className={`rounded-md p-2 text-sm ${
-                    isHighlighted ? "bg-amber-50 ring-2 ring-amber-400" : ""
-                  }`}
-                >
-                  <p className="text-xs font-medium text-gray-500">
-                    {line.timestamp} · {line.speaker}
-                  </p>
-                  <p className="mt-0.5 text-gray-800">{line.text}</p>
-                </li>
-              );
-            })}
-          </ol>
         </section>
       </div>
     </div>

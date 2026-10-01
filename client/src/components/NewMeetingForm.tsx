@@ -84,12 +84,12 @@ export function NewMeetingForm({ onCreated }: NewMeetingFormProps) {
   return (
     <div className="mx-auto max-w-2xl px-4 py-8">
       <div className="mb-6 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold text-gray-900">New meeting</h1>
+        <h1 className="heading-serif text-2xl">New meeting</h1>
         <button
           type="button"
           onClick={fillSample}
           disabled={submitting}
-          className="rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          className="btn-flat btn-flat-secondary btn-flat-sm"
         >
           Try a sample
         </button>
@@ -97,7 +97,7 @@ export function NewMeetingForm({ onCreated }: NewMeetingFormProps) {
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-6">
         <div>
-          <label htmlFor="title" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="title" className="field-label">
             Title
           </label>
           <input
@@ -106,28 +106,25 @@ export function NewMeetingForm({ onCreated }: NewMeetingFormProps) {
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             disabled={submitting}
-            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 disabled:cursor-not-allowed disabled:bg-gray-100"
+            className="field-input"
             placeholder="e.g. Q3 Roadmap Sync"
           />
         </div>
 
         <div>
-          <label htmlFor="agenda-input" className="block text-sm font-medium text-gray-700">
-            Agenda topics <span className="text-gray-400">(optional)</span>
+          <label htmlFor="agenda-input" className="field-label">
+            Agenda topics <span className="text-soft">(optional)</span>
           </label>
-          <div className="mt-1 flex flex-wrap gap-2">
+          <div className="mt-2 flex flex-wrap gap-2">
             {agenda.map((item, i) => (
-              <span
-                key={`${item}-${i}`}
-                className="inline-flex items-center gap-1 rounded-full bg-teal-50 px-3 py-1 text-sm text-teal-800"
-              >
+              <span key={`${item}-${i}`} className="chip chip-removable">
                 {item}
                 <button
                   type="button"
                   onClick={() => removeAgendaItem(i)}
                   disabled={submitting}
                   aria-label={`Remove ${item}`}
-                  className="rounded-full text-teal-600 hover:text-teal-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600"
+                  className="chip-remove"
                 >
                   ×
                 </button>
@@ -141,24 +138,24 @@ export function NewMeetingForm({ onCreated }: NewMeetingFormProps) {
             onChange={(e) => setAgendaInput(e.target.value)}
             onKeyDown={handleAgendaKeyDown}
             disabled={submitting || !canAddAgendaItem}
-            className="mt-2 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 disabled:cursor-not-allowed disabled:bg-gray-100"
+            className="field-input mt-2"
             placeholder={
               canAddAgendaItem
                 ? "Type a topic and press Enter"
                 : `Maximum ${AGENDA_MAX_ITEMS} topics`
             }
           />
-          <p className="mt-1 text-xs text-gray-500">
+          <p className="field-hint">
             No agenda? Leave this empty — topics will be inferred from the transcript.
           </p>
         </div>
 
         <div>
           <div className="flex items-center justify-between">
-            <label htmlFor="transcript" className="block text-sm font-medium text-gray-700">
+            <label htmlFor="transcript" className="field-label">
               Transcript
             </label>
-            <label className="cursor-pointer text-sm font-medium text-teal-700 hover:text-teal-900">
+            <label className="cursor-pointer text-sm font-medium text-[var(--color-ink)] underline decoration-[var(--color-margin)] hover:decoration-current">
               Upload .txt
               <input
                 ref={fileInputRef}
@@ -176,31 +173,27 @@ export function NewMeetingForm({ onCreated }: NewMeetingFormProps) {
             onChange={(e) => setTranscript(e.target.value)}
             disabled={submitting}
             rows={12}
-            className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 text-sm font-mono focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 disabled:cursor-not-allowed disabled:bg-gray-100"
+            className="field-input field-textarea"
             placeholder="Paste your transcript here…"
           />
-          <p className="mt-1 text-xs text-gray-500">
+          <p className="field-hint">
             Tip: Fathom's "Copy" button output pastes straight in here — no reformatting needed.
           </p>
         </div>
 
         {error && (
-          <div className="rounded-md border border-red-200 bg-red-50 p-3">
-            <p className="text-sm text-red-800">{error}</p>
+          <div className="banner banner-error">
+            <p className="text-sm">{error}</p>
           </div>
         )}
 
         {submitting && (
-          <p className="text-sm text-gray-600" role="status">
+          <p className="text-sm text-soft" role="status">
             Analyzing… this can take up to a minute.
           </p>
         )}
 
-        <button
-          type="submit"
-          disabled={!canSubmit}
-          className="rounded-md bg-teal-600 px-4 py-2 text-sm font-medium text-white hover:bg-teal-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-        >
+        <button type="submit" disabled={!canSubmit} className="btn-flat">
           {submitting ? "Analyzing…" : "Analyze meeting"}
         </button>
       </form>
