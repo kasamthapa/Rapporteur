@@ -135,3 +135,8 @@ Deleted before finalizing, since they were not real prompt/response captures:
 - `.agent-logs/.hook-debug.log` — the temporary raw-stdin dump mentioned above.
 - `.claude/hooks/.capture-state/*.json` — per-session working state the hook uses
   internally to pair a prompt with its response; not log output.
+
+## Addendum (1 Oct)
+- A Codex review pass was planned (AGENTS.md exists) but never run.
+- Planning and design discussion happened in a separate Claude chat, which is not in .agent-logs.
+- UI direction (landing, styling) was chosen by me; prompts for those UI tasks were drafted with help from that chat and run in Claude Code.

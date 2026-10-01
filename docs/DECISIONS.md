@@ -51,3 +51,15 @@
 - No live capture; single shared Gemini free-tier quota (per-minute and daily limits).
 - Only 3 speakers in my longest seed meeting; the 1-hour, 8-speaker case is untested on real data.
 - [add more as found]
+
+## Nepali and English in transcripts
+Transcripts can mix Nepali and English. The prompt tells the model to quote in the original language and not translate, so the exact-words check still works. Not tested beyond the seed meeting.
+
+## Cut: Supabase
+Planned for storing meetings. Cut because seed results served from files meet the demo need, and every extra service is another failure point inside a 24h window. Revisit if time allows.
+
+## Closed set for agenda items
+The model may only assign claims to agenda items from the list the user gave, plus "Off-agenda". Free-form agenda labels made grouping inconsistent.
+
+## Quote check is word-for-word on the cited line only
+Chosen over searching the whole transcript: a search would be more work and would match similar-sounding lines elsewhere, which hides a wrong citation. The cost: correct ideas with paraphrased quotes get flagged.

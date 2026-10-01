@@ -41,7 +41,7 @@ client: React + Vite + TypeScript + Tailwind
 server: Node + Express + TypeScript
 DB: Supabase Postgres — table meetings (id, title, agenda jsonb, transcript text,
 result jsonb, template text, created_at, share_id)
-LLM: Gemini gemini-2.5-flash, structured JSON output
+LLM: Gemini (model set by GEMINI_MODEL env var), structured JSON output
 Deploy: Vercel + Render
 
 ## Rules
@@ -73,3 +73,9 @@ meeting with no decisions or action items (say so); item with no owner;
 "maybe/should we" vs real commitment; decision reversed later in meeting;
 very long transcript (1h, 8 speakers); mixed Nepali/English; invalid LLM JSON;
 429 rate limit; evidence quote not found (→ unverified).
+Do not use sub-agents.
+
+## Status (1 Oct) - overrides anything above
+- Supabase/Postgres was cut. Meetings are seed results served from files in server/seed/results.
+- Not built: summary templates (4), search (5), share link (6), audio upload (8).
+- Built: parsing, extraction, quote check, click-to-line, landing page, deploy.
