@@ -107,6 +107,7 @@ export async function analyzeMeeting(
 
   return {
     ...verified,
+    transcriptLines: lines,
     meta: {
       transcriptLineCount: lines.length,
       generatedAt: new Date().toISOString(),

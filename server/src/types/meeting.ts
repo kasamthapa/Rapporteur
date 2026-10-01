@@ -52,6 +52,7 @@ export interface MeetingResult {
   actionItems: ActionItem[];
   offAgenda: OffAgendaEntry[];
   agendaCoverage: AgendaCoverageEntry[];
+  transcriptLines: ParsedLine[];
   meta: {
     transcriptLineCount: number;
     generatedAt: string;

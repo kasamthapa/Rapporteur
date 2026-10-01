@@ -135,6 +135,1712 @@
       "generatedAt": "2026-10-01T03:37:34.893Z",
       "verifiedCount": 9,
       "unverifiedCount": 1
-    }
+    },
+    "transcriptLines": [
+      {
+        "lineNumber": 1,
+        "timestamp": "0:00",
+        "speaker": "Kasam Thapa",
+        "text": "Overall project so you can be here so let's summarize what's today's meeting properly and then we can go so we are talking about we have meeting for the pre-hackathon event so we are going to a hackathon on coming Friday and we are team of three and we are our name is team innovators and and we're here to plan what are we going to do and how will be structured our over three days of the hackathon."
+      },
+      {
+        "lineNumber": 2,
+        "timestamp": "0:00",
+        "speaker": "Kasam Thapa",
+        "text": "so and we have there are three tracks in the hackathon and among them we are choosing to build on fintech so and we have heard about some project or some solution we can do so let's hear from Samrat Ghimire like what what is our plan and what's solution or problem we are solving we need to tell it again"
+      },
+      {
+        "lineNumber": 3,
+        "timestamp": "0:00",
+        "speaker": "Kasam Thapa",
+        "text": "Okay."
+      },
+      {
+        "lineNumber": 4,
+        "timestamp": "1:03",
+        "speaker": "Samrat Ghimire",
+        "text": "As I have told earlier that our main idea is to help merchant and bank to connect with each other."
+      },
+      {
+        "lineNumber": 5,
+        "timestamp": "1:03",
+        "speaker": "Samrat Ghimire",
+        "text": "We are just the middleware that help give this, you know, that on our small merchant, collateral free money as a loan."
+      },
+      {
+        "lineNumber": 6,
+        "timestamp": "1:03",
+        "speaker": "Samrat Ghimire",
+        "text": "This is the whole concept of our project. Okay. If, if we want to go in depth, who is this?"
+      },
+      {
+        "lineNumber": 7,
+        "timestamp": "1:03",
+        "speaker": "Samrat Ghimire",
+        "text": "How many people are coming, bro? Wait, I come out."
+      },
+      {
+        "lineNumber": 8,
+        "timestamp": "1:45",
+        "speaker": "Kasam Thapa",
+        "text": "Okay, let's continue."
+      },
+      {
+        "lineNumber": 9,
+        "timestamp": "1:49",
+        "speaker": "Pawan Pokharel",
+        "text": "Let's continue, brother. Oh, me?"
+      },
+      {
+        "lineNumber": 10,
+        "timestamp": "1:52",
+        "speaker": "Samrat Ghimire",
+        "text": "Ask Pawan, my alarm just kick off. I'm going, I'm going to check it to turn off."
+      },
+      {
+        "lineNumber": 11,
+        "timestamp": "1:58",
+        "speaker": "Pawan Pokharel",
+        "text": "Okay, sorry."
+      },
+      {
+        "lineNumber": 12,
+        "timestamp": "1:59",
+        "speaker": "Kasam Thapa",
+        "text": "Bye, bye,"
+      },
+      {
+        "lineNumber": 13,
+        "timestamp": "2:05",
+        "speaker": "Pawan Pokharel",
+        "text": "Hello Kasam, your internet gone."
+      },
+      {
+        "lineNumber": 14,
+        "timestamp": "2:10",
+        "speaker": "Kasam Thapa",
+        "text": "Okay, I'm back. I'm back, brother. Back, back."
+      },
+      {
+        "lineNumber": 15,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "So, yeah, there are, I think, three or four steps. I think Kasam internet gone. Yeah, but the recording is still on, so I'm going to continue."
+      },
+      {
+        "lineNumber": 16,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay. So, there are three to four steps that, you know, customer or the merchants should follow. The first one is that they have to open their bank account and click on a merchant loan."
+      },
+      {
+        "lineNumber": 17,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "after that, some series of questions might occur, like it's a psychological question they need to answer. And after that, they need to connect the different accounts like E-Sewa, Electricity Authority account to face the information like for"
+      },
+      {
+        "lineNumber": 18,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "Are they paying money or not? Are they consistent with the money they have been, you know, paying the government money or not?"
+      },
+      {
+        "lineNumber": 19,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "And after that, they have to vouch or take vouch from the person who have respected authority in a community."
+      },
+      {
+        "lineNumber": 20,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "And after that, after that, all the information that they have filled go to our trust layer main application and the AI will summarize it in a very simple language."
+      },
+      {
+        "lineNumber": 21,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "And then the manager or, you know, the manager or the person who work or that work in a bank will pick in that, you know, summarize whether to give them a loan or not."
+      },
+      {
+        "lineNumber": 22,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "Our system is just there as a middleware, okay? You will not say that to give him a loan is eligible, but it will just give a whole summary of the person and the decision will make by."
+      },
+      {
+        "lineNumber": 23,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "Our manager, okay, not by us or our system. So this is the whole concept of our trust layer. And this will, I think, definitely help solve the problem in the real community."
+      },
+      {
+        "lineNumber": 24,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "What do you think, Pawan? That's a great idea and what we are building about our system. Your internet is kind of unstable."
+      },
+      {
+        "lineNumber": 25,
+        "timestamp": "2:15",
+        "speaker": "Samrat Ghimire",
+        "text": "Hello, hello. I audible? Yeah, yeah."
+      },
+      {
+        "lineNumber": 26,
+        "timestamp": "4:28",
+        "speaker": "Kasam Thapa",
+        "text": "And, okay."
+      },
+      {
+        "lineNumber": 27,
+        "timestamp": "4:30",
+        "speaker": "Pawan Pokharel",
+        "text": "Is this, was Fathom, Fathom here? Yeah, yeah. Yeah, absolutely. That's why I continue my summary or whatever about the project."
+      },
+      {
+        "lineNumber": 28,
+        "timestamp": "4:40",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. I tell everything about my project, you know, from step S or the, how many steps are there to get loan, how bank will decide, okay."
+      },
+      {
+        "lineNumber": 29,
+        "timestamp": "4:40",
+        "speaker": "Samrat Ghimire",
+        "text": "Not, uh, our trust layer will not say to give him a loan or not. Uh, the decision would make by the business, uh, that bank on our manager or a worker."
+      },
+      {
+        "lineNumber": 30,
+        "timestamp": "4:40",
+        "speaker": "Samrat Ghimire",
+        "text": "That is. is the whole idea of our project. That was what I was talking about. So one thing, I'm afraid about the questions and trust on this system."
+      },
+      {
+        "lineNumber": 31,
+        "timestamp": "5:09",
+        "speaker": "Kasam Thapa",
+        "text": "So what do you think, will we build trust like how we show, how do we show to the people that our system can be trusted?"
+      },
+      {
+        "lineNumber": 32,
+        "timestamp": "5:20",
+        "speaker": "Samrat Ghimire",
+        "text": "Are you talking about the judges in an hackathon or in a real world?"
+      },
+      {
+        "lineNumber": 33,
+        "timestamp": "5:24",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah, they mostly ask about the trust thing because how we trust like they will return the loan. When we were starting about this system, we did find out some news, right?"
+      },
+      {
+        "lineNumber": 34,
+        "timestamp": "5:36",
+        "speaker": "Samrat Ghimire",
+        "text": "Nepal are also supporting this system just a month or two months ago. Do you recognize that? Yeah, but in previous hackathon, one just asked about how do you guarantee they will return the loan."
+      },
+      {
+        "lineNumber": 35,
+        "timestamp": "5:36",
+        "speaker": "Samrat Ghimire",
+        "text": "The trust one, yeah, I think we need to work on that. We built a system, have everything now, we need to find out how to get interest, and we will make sure that we will get interest given."
+      },
+      {
+        "lineNumber": 36,
+        "timestamp": "6:13",
+        "speaker": "Pawan Pokharel",
+        "text": "Oh yeah, let's discuss on that."
+      },
+      {
+        "lineNumber": 37,
+        "timestamp": "6:15",
+        "speaker": "Samrat Ghimire",
+        "text": "What do you think? Do you have some idea of it?"
+      },
+      {
+        "lineNumber": 38,
+        "timestamp": "6:17",
+        "speaker": "Kasam Thapa",
+        "text": "What can we do?"
+      },
+      {
+        "lineNumber": 39,
+        "timestamp": "6:19",
+        "speaker": "Samrat Ghimire",
+        "text": "How can we tackle the question, or we can be prepared for that question?"
+      },
+      {
+        "lineNumber": 40,
+        "timestamp": "6:24",
+        "speaker": "Kasam Thapa",
+        "text": "How are we going to be trusted? How is bank is going to trust our metrics?"
+      },
+      {
+        "lineNumber": 41,
+        "timestamp": "6:28",
+        "speaker": "Pawan Pokharel",
+        "text": "For this, we have to make more plans about these things, and this we got recently this question. So, to build a trust between the people, I think we have to make some things like I am thinking right now."
+      },
+      {
+        "lineNumber": 42,
+        "timestamp": "6:28",
+        "speaker": "Pawan Pokharel",
+        "text": "So, we are still processing?"
+      },
+      {
+        "lineNumber": 43,
+        "timestamp": "6:54",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, we are planning these questions to build trust."
+      },
+      {
+        "lineNumber": 44,
+        "timestamp": "6:59",
+        "speaker": "Pawan Pokharel",
+        "text": "much."
+      },
+      {
+        "lineNumber": 45,
+        "timestamp": "6:59",
+        "speaker": "Kasam Thapa",
+        "text": "Thank"
+      },
+      {
+        "lineNumber": 46,
+        "timestamp": "7:00",
+        "speaker": "Pawan Pokharel",
+        "text": "Search more on this and then we prepare on the concrete answers."
+      },
+      {
+        "lineNumber": 47,
+        "timestamp": "7:04",
+        "speaker": "Kasam Thapa",
+        "text": "How will we be going to tackle?"
+      },
+      {
+        "lineNumber": 48,
+        "timestamp": "7:07",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah."
+      },
+      {
+        "lineNumber": 49,
+        "timestamp": "7:09",
+        "speaker": "Samrat Ghimire",
+        "text": "And like what should we add like more like something that would uh something like that ostens the people and so that we can try to be best among all the ones and because we are planning to win."
+      },
+      {
+        "lineNumber": 50,
+        "timestamp": "7:09",
+        "speaker": "Samrat Ghimire",
+        "text": "So how do you win guys? I think our top most and the most important uh priority would be given for presentation."
+      },
+      {
+        "lineNumber": 51,
+        "timestamp": "7:09",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay we are going to do that for whole or one and a half day okay. I think that would be our strategy need to be our strategy."
+      },
+      {
+        "lineNumber": 52,
+        "timestamp": "7:09",
+        "speaker": "Samrat Ghimire",
+        "text": "What do you think Kasam? Yeah so first day we plan and research about at least three hours then we start on building the"
+      },
+      {
+        "lineNumber": 53,
+        "timestamp": "8:04",
+        "speaker": "Pawan Pokharel",
+        "text": "I have one thing to say, just our system, there is one system in Nepal, about one week ago, I have seen that things in real, that easier doing things, what they are, what they have provided that if I am a softkeeper and I have to take a loan, I have just an account, say, then I Then in all the transactions of my shop, I have done through my ISEVA account."
+      },
+      {
+        "lineNumber": 54,
+        "timestamp": "8:04",
+        "speaker": "Pawan Pokharel",
+        "text": "And that ISEVA person knows that my, all the details, what I am doing transaction, my overall activity about my money at ISEVA."
+      },
+      {
+        "lineNumber": 55,
+        "timestamp": "8:04",
+        "speaker": "Pawan Pokharel",
+        "text": "And if I have to get the 50,000 and I am doing the transaction every day, 10,000, 20,000, then ISEVA is giving free, without any property."
+      },
+      {
+        "lineNumber": 56,
+        "timestamp": "8:04",
+        "speaker": "Pawan Pokharel",
+        "text": "If or trust, Shiksha is giving easy loan. That's the things which Shiksha is giving now. Nice."
+      },
+      {
+        "lineNumber": 57,
+        "timestamp": "9:12",
+        "speaker": "Samrat Ghimire",
+        "text": "So our competition is already in the market. Yeah, he is giving about the transaction history of that person, that loan."
+      },
+      {
+        "lineNumber": 58,
+        "timestamp": "9:12",
+        "speaker": "Samrat Ghimire",
+        "text": "So we have to change a little bit. But our system is giving much more money than just the 50,000 I think."
+      },
+      {
+        "lineNumber": 59,
+        "timestamp": "9:12",
+        "speaker": "Samrat Ghimire",
+        "text": "It's like two, lakhs, but according to the amount, we have to build a trust."
+      },
+      {
+        "lineNumber": 60,
+        "timestamp": "9:37",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah. So you might be something giving micro loans, like small, small loans. But we start with micro loans. But eventually, when you build the credit and trust over the financial system or financial network or what we say, financial community, then you will get more like how a credit score works."
+      },
+      {
+        "lineNumber": 61,
+        "timestamp": "10:00",
+        "speaker": "Samrat Ghimire",
+        "text": "in the financial sector that's how we are directly including our system into the financial sector so it must be connected with each and everything in the financial sector from it will be a network within a near sun okay slowly gradually it's going to build a credit for everyone then we will find out that this is the person we can trust or not we have to think research about this thing okay what are we planning to bring food food yeah are you are we bringing or not are you talking about the food that they are they will be giving because we cannot trust yeah yeah very important in having nightmares about that cowlifar the first hackathon the email in one yeah okay nightmare"
+      },
+      {
+        "lineNumber": 62,
+        "timestamp": "10:00",
+        "speaker": "Samrat Ghimire",
+        "text": "I will be bringing some noodles, biscuits, and something."
+      },
+      {
+        "lineNumber": 63,
+        "timestamp": "11:10",
+        "speaker": "Pawan Pokharel",
+        "text": "I think I am planning to take one induction and frozen momo."
+      },
+      {
+        "lineNumber": 64,
+        "timestamp": "11:19",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay, okay. Samrat, Coke Zero. Okay, okay. And Pawan, you can just, what?"
+      },
+      {
+        "lineNumber": 65,
+        "timestamp": "11:29",
+        "speaker": "Kasam Thapa",
+        "text": "I don't know."
+      },
+      {
+        "lineNumber": 66,
+        "timestamp": "11:30",
+        "speaker": "Pawan Pokharel",
+        "text": "I will bring Dalmat. Do not?"
+      },
+      {
+        "lineNumber": 67,
+        "timestamp": "11:34",
+        "speaker": "Kasam Thapa",
+        "text": "Dalmat. Dalmat."
+      },
+      {
+        "lineNumber": 68,
+        "timestamp": "11:36",
+        "speaker": "Pawan Pokharel",
+        "text": "You are the owner of Shopkeeper."
+      },
+      {
+        "lineNumber": 69,
+        "timestamp": "11:38",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, bro, not Dalmat. You need to bring something. You have grocery. That Korean thing and everything, bro. Just Dalmat."
+      },
+      {
+        "lineNumber": 70,
+        "timestamp": "11:38",
+        "speaker": "Samrat Ghimire",
+        "text": "think sir is still texting with us. Not the noodle Korean, that, you know, that Kurkure, that layer. Okay, Let's get back to the topic."
+      },
+      {
+        "lineNumber": 71,
+        "timestamp": "11:58",
+        "speaker": "Kasam Thapa",
+        "text": "Okay, okay."
+      },
+      {
+        "lineNumber": 72,
+        "timestamp": "12:00",
+        "speaker": "Pawan Pokharel",
+        "text": "Starting Friday, we land there and from 7 a.m. will start. So the building, build a development sprint start from 9."
+      },
+      {
+        "lineNumber": 73,
+        "timestamp": "12:11",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. So when we start, we just focus on research."
+      },
+      {
+        "lineNumber": 74,
+        "timestamp": "12:15",
+        "speaker": "Pawan Pokharel",
+        "text": "Each one doing separate research."
+      },
+      {
+        "lineNumber": 75,
+        "timestamp": "12:18",
+        "speaker": "Samrat Ghimire",
+        "text": "And after a few hours, for a few hours, we will do individually, like no disturbance to each other."
+      },
+      {
+        "lineNumber": 76,
+        "timestamp": "12:25",
+        "speaker": "Pawan Pokharel",
+        "text": "And after a few hours, we collect and share what we have researched. And then we discuss, we plan, we like find errors."
+      },
+      {
+        "lineNumber": 77,
+        "timestamp": "12:25",
+        "speaker": "Pawan Pokharel",
+        "text": "We fight with each other."
+      },
+      {
+        "lineNumber": 78,
+        "timestamp": "12:36",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. That last time. We discuss, we like contradict with each other's idea. Criticize, yeah, everything, everything. We do that."
+      },
+      {
+        "lineNumber": 79,
+        "timestamp": "12:36",
+        "speaker": "Samrat Ghimire",
+        "text": "And then we come up with a common plan or trusted, agreed on plan. And then after we have that agreed plan, then we can move on that plan smoothly."
+      },
+      {
+        "lineNumber": 80,
+        "timestamp": "12:36",
+        "speaker": "Samrat Ghimire",
+        "text": "And then when that plan is ready. So the plan starts getting built, and when the plan turns into a code, we will do our thing as well, okay, that's a great plan, yeah, on day two we have to anyhow turn the plan into product, yeah, then after that, within a half day, okay bro, within a half day, and then we'll go into our presentation."
+      },
+      {
+        "lineNumber": 81,
+        "timestamp": "12:36",
+        "speaker": "Samrat Ghimire",
+        "text": "And then after that, we will slowly focus on how we present that and tackle questions, so is that good on overall pre-hackathon planning meeting?"
+      },
+      {
+        "lineNumber": 82,
+        "timestamp": "12:36",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, absolutely, it was a great time, yeah, we discussed about things, and the plan is great, yeah. Okay, so that's very good, and tomorrow also, tomorrow, because I just, we planned this meeting just day before the hackathon, like one."
+      },
+      {
+        "lineNumber": 83,
+        "timestamp": "14:00",
+        "speaker": "Pawan Pokharel",
+        "text": "Gap day because it will be like more of a hectic feeling just day before the hackathon. So I wanted tomorrow to be a free day so you could roam around, take your time and make your mind fresh."
+      },
+      {
+        "lineNumber": 84,
+        "timestamp": "14:18",
+        "speaker": "Kasam Thapa",
+        "text": "And when you come to the hackathon, you are just fresh and no load on your brain because if we planned it on tomorrow, it would be just like talking and planning everything."
+      },
+      {
+        "lineNumber": 85,
+        "timestamp": "14:28",
+        "speaker": "Samrat Ghimire",
+        "text": "So it will be on our head and we will be just Yeah, it would be like Ross or something like that."
+      },
+      {
+        "lineNumber": 86,
+        "timestamp": "14:34",
+        "speaker": "Kasam Thapa",
+        "text": "So it was great, right?"
+      },
+      {
+        "lineNumber": 87,
+        "timestamp": "14:37",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, yeah. So we have to win because we are going to win. We are definitely, bro. We are going to win and bring a trophy to the college."
+      },
+      {
+        "lineNumber": 88,
+        "timestamp": "14:37",
+        "speaker": "Samrat Ghimire",
+        "text": "Bring a trophy home. So here, Zarsi."
+      },
+      {
+        "lineNumber": 89,
+        "timestamp": "14:55",
+        "speaker": "Pawan Pokharel",
+        "text": "Oh, this is the old one, not the near one."
+      },
+      {
+        "lineNumber": 90,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "Oh, sorry. We can add one. After this. Pawan, you can cover your mouth. Oh face, face. Cover it all off your walls."
+      },
+      {
+        "lineNumber": 91,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay, let's wrap the meeting up. That's the oral thing we talked about and we will definitely give our best."
+      },
+      {
+        "lineNumber": 92,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "Who will win? All the things we have learned till now from all those failures, all those humiliations, and all those regrets we had in previous hackathons."
+      },
+      {
+        "lineNumber": 93,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "We compound all those learnings in this one. And to win, even if you not win, we're going to bring the best."
+      },
+      {
+        "lineNumber": 94,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "So we are going to move to further bigger things and rather than some Success failure teaches us. That is what I learned from this whole five or six hackathon."
+      },
+      {
+        "lineNumber": 95,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay. Yeah, that's the great mindset. And okay, that's all. Thank you, guys. Thank you. Thank you. was a great session."
+      },
+      {
+        "lineNumber": 96,
+        "timestamp": "14:58",
+        "speaker": "Samrat Ghimire",
+        "text": "We need to do this again. Thank you, Mr. Pawan Pokharel, for giving time in his business. you are the busiest person here."
+      },
+      {
+        "lineNumber": 97,
+        "timestamp": "16:24",
+        "speaker": "Pawan Pokharel",
+        "text": "So thank you for your valuable time. Thank you for giving a precious time. And we're really grateful for everything."
+      },
+      {
+        "lineNumber": 98,
+        "timestamp": "16:33",
+        "speaker": "Kasam Thapa",
+        "text": "And we're very glad and we're happy for you to be here."
+      },
+      {
+        "lineNumber": 99,
+        "timestamp": "16:40",
+        "speaker": "Samrat Ghimire",
+        "text": "Seeing your face does motivate us, Oscar. Thank you so much."
+      },
+      {
+        "lineNumber": 100,
+        "timestamp": "16:46",
+        "speaker": "Pawan Pokharel",
+        "text": "Your presence brings value to us. Thank you so much. I managed my little bit time for you guys to give my opinion."
+      },
+      {
+        "lineNumber": 101,
+        "timestamp": "16:46",
+        "speaker": "Pawan Pokharel",
+        "text": "And I will give you my best at Agathon and make you guys to win. This hackathon to let's go and wrap up and continue the hackathon."
+      },
+      {
+        "lineNumber": 102,
+        "timestamp": "17:10",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay, Mr. Pawan Pokharel."
+      },
+      {
+        "lineNumber": 103,
+        "timestamp": "17:13",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah, yeah, yeah. Clap for that."
+      },
+      {
+        "lineNumber": 104,
+        "timestamp": "17:17",
+        "speaker": "Samrat Ghimire",
+        "text": "Thank you for everything Pawan. So Pawan is going to lead us and he's our leader. Yeah. And we hope you show us the right path."
+      },
+      {
+        "lineNumber": 105,
+        "timestamp": "17:17",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. May we not win, but we just may we learn, not regret. Just the voice of Pawan is melody for me."
+      },
+      {
+        "lineNumber": 106,
+        "timestamp": "17:17",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah."
+      },
+      {
+        "lineNumber": 107,
+        "timestamp": "17:42",
+        "speaker": "Pawan Pokharel",
+        "text": "You are so motivated with me. Yeah, bro. Make your mindset like this. I think I need to take your picture and you know, do that puja and everything every day."
+      },
+      {
+        "lineNumber": 108,
+        "timestamp": "17:52",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, yeah. Before going to sleep, just after waking up. Your face."
+      },
+      {
+        "lineNumber": 109,
+        "timestamp": "18:01",
+        "speaker": "Pawan Pokharel",
+        "text": "I think Samrat is live with me. Okay, that's very good. Okay, before wrapping up, I want Mr."
+      },
+      {
+        "lineNumber": 110,
+        "timestamp": "18:16",
+        "speaker": "Samrat Ghimire",
+        "text": "Pawan Pokharel to give his thoughts about five minutes speech on overall learning from previous hackathon and what can we implement over here and if our project is actually good to win and if not winning, what should we focus on?"
+      },
+      {
+        "lineNumber": 111,
+        "timestamp": "18:33",
+        "speaker": "Kasam Thapa",
+        "text": "Mr. Pawan Pokharel, have five minutes and utilize it properly. Not less, not more. Five minutes. Time starts."
+      },
+      {
+        "lineNumber": 112,
+        "timestamp": "18:41",
+        "speaker": "Pawan Pokharel",
+        "text": "It's 4.417."
+      },
+      {
+        "lineNumber": 113,
+        "timestamp": "18:42",
+        "speaker": "Samrat Ghimire",
+        "text": "Now start."
+      },
+      {
+        "lineNumber": 114,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "I think I have just many things about you guys and this is just meeting and in this meeting we can't wrap of all the things and do all things."
+      },
+      {
+        "lineNumber": 115,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "By meeting at the hackathon we will do. more discussion and we will research in these things and Kasam said that what I learned and what we can do further the hackathon and that I have done last time and I mostly say that we have to focus mainly presentation, first presentation, then system and the system should work properly yeah guys are you listening yeah as I said that your sound is melody that's why I am experiencing it okay I will conclude my things and we have to focus on presentation mainly and we have already seen that our other opponent giving two good women selected in the prison for the final round they are giving two good they are tackling the question very much very confidently the question raised by the judge that should be we we must what"
+      },
+      {
+        "lineNumber": 116,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "Tackle that in a confident way that Josh will be confused, what this person is saying, to tackle things like that, we have to be very energetic in that things."
+      },
+      {
+        "lineNumber": 117,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah, and as you know, for the system, we have the great system, and we have already won the one hackathon by these kind of ideas."
+      },
+      {
+        "lineNumber": 118,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "So, by learning from that hackathon, we have to add more things, and doing research more about these things. And we have to make more plant, and that's much that we will do follow, we will definitely win."
+      },
+      {
+        "lineNumber": 119,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "And winning is not the things that we have to learn new things, and we have to be motivated, and do our work very hard."
+      },
+      {
+        "lineNumber": 120,
+        "timestamp": "18:44",
+        "speaker": "Pawan Pokharel",
+        "text": "That's my things, and everyone should make mind."
+      },
+      {
+        "lineNumber": 121,
+        "timestamp": "21:06",
+        "speaker": "Samrat Ghimire",
+        "text": "Thank you very much Mr."
+      },
+      {
+        "lineNumber": 122,
+        "timestamp": "21:09",
+        "speaker": "Pawan Pokharel",
+        "text": "Pawan Pokharel. I want Mr."
+      },
+      {
+        "lineNumber": 123,
+        "timestamp": "21:17",
+        "speaker": "Kasam Thapa",
+        "text": "Samrat Ghimire to discuss."
+      },
+      {
+        "lineNumber": 124,
+        "timestamp": "21:22",
+        "speaker": "Samrat Ghimire",
+        "text": "Give me one minute. I have to process the thing that Pawan said. You can share now."
+      },
+      {
+        "lineNumber": 125,
+        "timestamp": "21:33",
+        "speaker": "Pawan Pokharel",
+        "text": "want your guys perspective."
+      },
+      {
+        "lineNumber": 126,
+        "timestamp": "21:36",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay now tell me what should I say. Overall focus on what type of feature are we going to focus mostly on?"
+      },
+      {
+        "lineNumber": 127,
+        "timestamp": "21:47",
+        "speaker": "Kasam Thapa",
+        "text": "What problem are we actually solving? Because this loan repayment thing and loan taking credit scoring, we have too much things to process."
+      },
+      {
+        "lineNumber": 128,
+        "timestamp": "21:47",
+        "speaker": "Kasam Thapa",
+        "text": "And what's that?"
+      },
+      {
+        "lineNumber": 129,
+        "timestamp": "22:00",
+        "speaker": "Pawan Pokharel",
+        "text": "That one MVP we are focusing on, like, what should we focus, that shows what problem are we solving, like, we cannot do everything in one go, so we have to focus on one MVP, so what is that one MVP we are focusing, and also some extra things that support it and complement it, so that we have something to showcase in the final project."
+      },
+      {
+        "lineNumber": 130,
+        "timestamp": "22:27",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, as we are doing a project under a fintech, so fintech is where we need to really focus on security, okay, that's why we need to implement the features like, you know, that we need to have that psychological question, okay, that's the non-negotiable, okay."
+      },
+      {
+        "lineNumber": 131,
+        "timestamp": "22:27",
+        "speaker": "Samrat Ghimire",
+        "text": "The second one is the credit scoring, and the third, I will take this fraud detection in the top one, okay, it's the most important part of our project."
+      },
+      {
+        "lineNumber": 132,
+        "timestamp": "22:27",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay. The fraud detection clustering, you know circle clustering, that's why. Wait, can I interrupt you for a second?"
+      },
+      {
+        "lineNumber": 133,
+        "timestamp": "23:07",
+        "speaker": "Kasam Thapa",
+        "text": "Yeah, yeah, absolutely."
+      },
+      {
+        "lineNumber": 134,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "Okay, before moving ahead, I want to know, like, I'm just blank on how we catch fraud, like, how are you going to detect some fraud, because anyone can put fake data nowadays, and it could be similar."
+      },
+      {
+        "lineNumber": 135,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, But how are you actually going to do the fraud detection? So, as we have discussed that there will be some vouchers that going to vouch for the specific merchant, whether to keep loan or not, right."
+      },
+      {
+        "lineNumber": 136,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "So, all the merchant will have individual credit and the power to vouch others. Okay. So what if, you know, three or four group of same family or the group of a merchant who live nearby, for each other, then there will be some destruction to our own system, right?"
+      },
+      {
+        "lineNumber": 137,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "That's why we have So this cluster in a graph by cluster. If someone try to, you know, vouch each other within a group, then it will, you know, find out that specific cluster."
+      },
+      {
+        "lineNumber": 138,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "It will be far from our, the whole construct of a cluster. That's why that bank can understand that they are the one who are, you know, cheating the system."
+      },
+      {
+        "lineNumber": 139,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "And this is the whole priority we need to focus on. Rather than the information, after we, you know, communicate with the, you know, this ISHIVA, Nepal Electricity Authority, we'll find out the data and we're going to train the ML model."
+      },
+      {
+        "lineNumber": 140,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "But right now we need to show what our system going to find the fraud. That is the most important part."
+      },
+      {
+        "lineNumber": 141,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "And if the fraud are detected, we need to, we will give the money, you know, who need it. We're going to, are, what do you say?"
+      },
+      {
+        "lineNumber": 142,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "I forgot the word. Who are capable of that, okay? Like the sweet. Nita that we will talk about. This is, I think, all we need to prioritize, the fraud detection."
+      },
+      {
+        "lineNumber": 143,
+        "timestamp": "23:09",
+        "speaker": "Samrat Ghimire",
+        "text": "This is the most important part of our project. Also, how are we, because our product is focused on the financial sector and the financial institutions like banks are going to integrate our infrastructure, our system, so how are we going to make them believe or trust that they won't be gamed?"
+      },
+      {
+        "lineNumber": 144,
+        "timestamp": "25:27",
+        "speaker": "Kasam Thapa",
+        "text": "And it will actually work on their behalf also because only solving the problem of the user from the customer that they will get loan, they will get a small incentive or a small amount of money from different metrics apart from the properties and collaterals, but how are banks are going to be benefited from there and how are we going to make them trust that this will actually work?"
+      },
+      {
+        "lineNumber": 145,
+        "timestamp": "25:27",
+        "speaker": "Kasam Thapa",
+        "text": "And like they won't be gamed or they won't won't"
+      },
+      {
+        "lineNumber": 146,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "So if we are talking about the bank that when I did research for this project I found out that Nepal have more than billions of money to give within their bank and they are giving a small percentage of money for the businesses who want loan with collateral."
+      },
+      {
+        "lineNumber": 147,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "But if we give this system to the bank, want to give money to the merchant or the people as a loan and merchants want a loan to advance their businesses."
+      },
+      {
+        "lineNumber": 148,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "we will be the middleware for that. This is why we are building the system. So there is a gap to bridge them."
+      },
+      {
+        "lineNumber": 149,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "They have money for the businesses or small merchants who want to get loan and they have still money in the bank."
+      },
+      {
+        "lineNumber": 150,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "There is still sitting in the bank and merchants want money, but there is no way for the bank to provide the loans like a safe metric or a safe system."
+      },
+      {
+        "lineNumber": 151,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "way to give that, yeah, safe way to find out whether they are capable or not. Where is the gap between them?"
+      },
+      {
+        "lineNumber": 152,
+        "timestamp": "26:05",
+        "speaker": "Samrat Ghimire",
+        "text": "Because the main gap is trust and what metrics are used to be given the loan and how the overall system should work for that."
+      },
+      {
+        "lineNumber": 153,
+        "timestamp": "27:30",
+        "speaker": "Kasam Thapa",
+        "text": "Because normal loans are easier, but these bigger systems are different."
+      },
+      {
+        "lineNumber": 154,
+        "timestamp": "27:38",
+        "speaker": "Samrat Ghimire",
+        "text": "So we are going to be middleware, I guess. Yeah, we will definitely interview them. So for the bank, we are bringing trust and risk analysis."
+      },
+      {
+        "lineNumber": 155,
+        "timestamp": "27:38",
+        "speaker": "Samrat Ghimire",
+        "text": "And for the merchants, we are bringing them more opportunities. giving them a support. Yeah, more opportunities. to grow their business and gain capital even in small amount and actually slowly grow their credit score or so that they can get bigger loans so that they grow even more so we are just bringing we are just giving each one what they need the banks need trust and actually analyze what merchants want money without collateral too so we are just bridging gap and giving what each entity wants so we are not being partially focused on one and like we are not forcing our system within our market we are just we are just not focusing on one like because if we only try to benefit the merchants like on their behalf giving them better loans grow them but we're not thinking about the bank like how would they trust how would they benefit from it because"
+      },
+      {
+        "lineNumber": 156,
+        "timestamp": "27:38",
+        "speaker": "Samrat Ghimire",
+        "text": "no bank will work on social or charity thing because that will be more like a charity thing not a overall system that works because it only works for some time but or if you build a system that benefits all the entities that are connected to the system it will eventually go in the longest run and evolve itself later so we are focusing on both parties both benefits and overly build a good system that could last longer yeah wow so what do you think that you are talking about i really like your idea okay okay so samrat you can continue like because i just took a pause on your thing to because it just hit on my mind from your words yeah you just described everything that i wanted to say okay you just gave everything from the first to the last"
+      },
+      {
+        "lineNumber": 157,
+        "timestamp": "27:38",
+        "speaker": "Samrat Ghimire",
+        "text": "You are the same, bro. You are just like Pawan. It's a melody. It's a melody to listen to everything."
+      },
+      {
+        "lineNumber": 158,
+        "timestamp": "27:38",
+        "speaker": "Samrat Ghimire",
+        "text": "know, Pawan, he is a leader. He plans. And I also know how we do, what idea we have, how we're solving."
+      },
+      {
+        "lineNumber": 159,
+        "timestamp": "30:14",
+        "speaker": "Pawan Pokharel",
+        "text": "But actually, on the technical part, to plan that, to convert this plan and this idea into a workable piece, you are the perfect person because you're the chief of technical..."
+      },
+      {
+        "lineNumber": 160,
+        "timestamp": "30:14",
+        "speaker": "Pawan Pokharel",
+        "text": "I know. What you are talking about. What we are planning, we are not only able to implement in the system, you are saying like that, okay?"
+      },
+      {
+        "lineNumber": 161,
+        "timestamp": "30:14",
+        "speaker": "Pawan Pokharel",
+        "text": "We're just being too ambitious, too much of ideation and planning."
+      },
+      {
+        "lineNumber": 162,
+        "timestamp": "30:46",
+        "speaker": "Kasam Thapa",
+        "text": "are doing big, big plans and bigger ideas. are just giving out, throwing words, random words and bigger speech, loud ideas."
+      },
+      {
+        "lineNumber": 163,
+        "timestamp": "30:46",
+        "speaker": "Kasam Thapa",
+        "text": "But is it actually implementable and is it actually able to..."
+      },
+      {
+        "lineNumber": 164,
+        "timestamp": "31:00",
+        "speaker": "Samrat Ghimire",
+        "text": "To turn that plan and these ideas we're talking about into the working piece, working product, and how are we going to do it?"
+      },
+      {
+        "lineNumber": 165,
+        "timestamp": "31:00",
+        "speaker": "Samrat Ghimire",
+        "text": "Kasam, you are talking about, we are talking more and planning more things and about features and what we can't implement in the system."
+      },
+      {
+        "lineNumber": 166,
+        "timestamp": "31:17",
+        "speaker": "Pawan Pokharel",
+        "text": "You are talking about that. For the Akethan, I wanted to say that we have very less time, which is when we think and when we have to, when we build a system that we have, because of lack of time, we cannot do."
+      },
+      {
+        "lineNumber": 167,
+        "timestamp": "31:17",
+        "speaker": "Pawan Pokharel",
+        "text": "If we have to do here the real life problem and solve the real life problem and really in the real world, we have to, if we have to implement these things, we have enough time and we have to plan very seriously and we can do."
+      },
+      {
+        "lineNumber": 168,
+        "timestamp": "31:17",
+        "speaker": "Pawan Pokharel",
+        "text": "Nothing is impossible, bro."
+      },
+      {
+        "lineNumber": 169,
+        "timestamp": "31:51",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, bro, that is the motivation, bro. Okay, okay."
+      },
+      {
+        "lineNumber": 170,
+        "timestamp": "31:54",
+        "speaker": "Pawan Pokharel",
+        "text": "just, we just, you just told the overall outer abstract thing, but."
+      },
+      {
+        "lineNumber": 171,
+        "timestamp": "32:00",
+        "speaker": "Kasam Thapa",
+        "text": "Inside the working piece, inside the idea, there is a step to turn that plan into code, into a working piece."
+      },
+      {
+        "lineNumber": 172,
+        "timestamp": "32:00",
+        "speaker": "Kasam Thapa",
+        "text": "So how are we going to do that and how much of our idea is ready to be implemented and to showcase in the final project?"
+      },
+      {
+        "lineNumber": 173,
+        "timestamp": "32:18",
+        "speaker": "Pawan Pokharel",
+        "text": "And we only have three days and two days and one single day, like half from the first day and half from the last day, even if we have time for other tasks."
+      },
+      {
+        "lineNumber": 174,
+        "timestamp": "32:18",
+        "speaker": "Pawan Pokharel",
+        "text": "In those remaining times, how much of the things are we able to achieve in the working piece, Mr."
+      },
+      {
+        "lineNumber": 175,
+        "timestamp": "32:39",
+        "speaker": "Kasam Thapa",
+        "text": "Samrat?"
+      },
+      {
+        "lineNumber": 176,
+        "timestamp": "32:40",
+        "speaker": "Pawan Pokharel",
+        "text": "Bro, you just asked us to come this meeting just to talk about. Now you want to write me. You want me to write a quote?"
+      },
+      {
+        "lineNumber": 177,
+        "timestamp": "32:47",
+        "speaker": "Samrat Ghimire",
+        "text": "No, I don't want you to write a quote because you're more of a technical person in our team, who's more familiar into building these things."
+      },
+      {
+        "lineNumber": 178,
+        "timestamp": "32:47",
+        "speaker": "Samrat Ghimire",
+        "text": "So I want you to write a Pardon me? Before going to the hackathon I want just us to discuss like how much of our idea is actually implementable in those time because we are just talking big MBCS big system thing because it is not a small thing we are building because we are building over an infrastructure so showcase in the final presentation how much of it is actually implementation and in which direction should we move and how much much effort should be put and where is the stopping point for us before giving the final showcase."
+      },
+      {
+        "lineNumber": 179,
+        "timestamp": "33:37",
+        "speaker": "Pawan Pokharel",
+        "text": "so guys wait wait wait I will come after five minutes okay? No no no wait wait wait. I will just mute and I will come after five minutes."
+      },
+      {
+        "lineNumber": 180,
+        "timestamp": "33:37",
+        "speaker": "Pawan Pokharel",
+        "text": "have to do emergency thing one thing. I will come. Okay. We will come and come."
+      },
+      {
+        "lineNumber": 181,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "So when we talk about the features. I don't think we need to focus more on data because data would be given by us after implementing or integrating with the real system for the ISEVA or Nepal Authority electricity or something like that, right?"
+      },
+      {
+        "lineNumber": 182,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "So we are going to mainly focus on the fraud detection thing. That is the most important part. The second one is that we will have our own local LLM which will for the security to summarize everything so that the worker or manager should understand what the person really is with the credit system and everything."
+      },
+      {
+        "lineNumber": 183,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "And we are definitely going to train one AI model with the seed data, okay? Synthetic data. That's all. We can compare the real credit with the machine learning output, whether they two are likable or not, or they two are giving the real output or the same output."
+      },
+      {
+        "lineNumber": 184,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "And with the comparison. It is good for the manager to also see that the real output and the comparison that the model train on a real data is giving the same thing."
+      },
+      {
+        "lineNumber": 185,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "So it will help the manager whether to give money or not. So these are the three things I think we need to focus on."
+      },
+      {
+        "lineNumber": 186,
+        "timestamp": "33:57",
+        "speaker": "Samrat Ghimire",
+        "text": "And other we will build gradually after our MVP is built. What do you think, Kasam? Okay. I didn't understand how are you going to use the LLM and how is it going to contribute to the project or stat system?"
+      },
+      {
+        "lineNumber": 187,
+        "timestamp": "35:33",
+        "speaker": "Kasam Thapa",
+        "text": "What LLM is supposed to do? Like not in a sense LLM, but what AI is going to do?"
+      },
+      {
+        "lineNumber": 188,
+        "timestamp": "35:42",
+        "speaker": "Samrat Ghimire",
+        "text": "Basically, this, you know, credit system would be the number, right? It's all about number. Like the psychological test is also number, the money that integrating the ISEVA statement and NEB, everything would be number, right?"
+      },
+      {
+        "lineNumber": 189,
+        "timestamp": "35:42",
+        "speaker": "Samrat Ghimire",
+        "text": "So it's difficult for many people to understand. And what our LLM or AI would do is to summarize the whole thing in a specific or simple summary that they can read it and understand it, what that merchant is, are they giving money or not, you know, they are consistent with giving money to the government or not, is their monthly, you know, this statement is good or not, whether, whether, if we give them a 60,000 loan, will they be able to give the interest on that 60,000 or not, this is what our AI summarize would take, okay, no, so AI is just working as a transcriptor, like, yeah, yeah, and, and, and the best thing is that it is going to run in your own local machine, so that the data is never going to leak, oh, so each client, like, let's say, Nobel Bank is going to use,"
+      },
+      {
+        "lineNumber": 190,
+        "timestamp": "37:00",
+        "speaker": "Kasam Thapa",
+        "text": "Our infrastructure and integrate in their system."
+      },
+      {
+        "lineNumber": 191,
+        "timestamp": "37:04",
+        "speaker": "Samrat Ghimire",
+        "text": "So they will have their own AI in their system, right? Not some access model they are using. So they will have their own AI trained on their own data and overall system that system that we are building."
+      },
+      {
+        "lineNumber": 192,
+        "timestamp": "37:19",
+        "speaker": "Kasam Thapa",
+        "text": "Yeah."
+      },
+      {
+        "lineNumber": 193,
+        "timestamp": "37:20",
+        "speaker": "Samrat Ghimire",
+        "text": "And is a guarantee of privacy. Yeah. Because it's running in your own local machine, there is no chance of that."
+      },
+      {
+        "lineNumber": 194,
+        "timestamp": "37:20",
+        "speaker": "Samrat Ghimire",
+        "text": "And it's also offline. Yeah. do not need to or have to be online. Oh, so when it was online, it faces all the things it needs."
+      },
+      {
+        "lineNumber": 195,
+        "timestamp": "37:38",
+        "speaker": "Kasam Thapa",
+        "text": "So it runs on offline too?"
+      },
+      {
+        "lineNumber": 196,
+        "timestamp": "37:40",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. Yeah. Online also offline also because it's running in your local machine, no one would be able to get access to it."
+      },
+      {
+        "lineNumber": 197,
+        "timestamp": "37:40",
+        "speaker": "Samrat Ghimire",
+        "text": "This is the whole purpose of security about our LLM to summarize the thing and help people, help the workers and managers to understand the things."
+      },
+      {
+        "lineNumber": 198,
+        "timestamp": "37:56",
+        "speaker": "Kasam Thapa",
+        "text": "Yeah."
+      },
+      {
+        "lineNumber": 199,
+        "timestamp": "37:56",
+        "speaker": "Samrat Ghimire",
+        "text": "Also, have one question will AI also... Thank Absolutely not, it's only there for the summarize and there is another one that we will train on ML model with the real data like people, first of all we will train a model and send the data and after the implementation in the real world we will use the real data to train that model as well and that the real credit score come from the real data."
+      },
+      {
+        "lineNumber": 200,
+        "timestamp": "37:56",
+        "speaker": "Samrat Ghimire",
+        "text": "and the ML, that train model will give the score and we will we can compare the both and whether they are giving the same score or not and it will have manager to decide."
+      },
+      {
+        "lineNumber": 201,
+        "timestamp": "38:47",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah, that's great."
+      },
+      {
+        "lineNumber": 202,
+        "timestamp": "38:53",
+        "speaker": "Kasam Thapa",
+        "text": "Onpuhil, you have any questions, right?"
+      },
+      {
+        "lineNumber": 203,
+        "timestamp": "38:57",
+        "speaker": "Pawan Pokharel",
+        "text": "So, I don't have any question right now. So we have the great plan. We are focused on the good system."
+      },
+      {
+        "lineNumber": 204,
+        "timestamp": "38:57",
+        "speaker": "Pawan Pokharel",
+        "text": "I think we will build the best system."
+      },
+      {
+        "lineNumber": 205,
+        "timestamp": "39:14",
+        "speaker": "Samrat Ghimire",
+        "text": "Cod and sugar in your mouth. Okay, okay. One question."
+      },
+      {
+        "lineNumber": 206,
+        "timestamp": "39:23",
+        "speaker": "Pawan Pokharel",
+        "text": "How are these numbers calculated? Like these credit numbers or scoring thing is happening?"
+      },
+      {
+        "lineNumber": 207,
+        "timestamp": "39:34",
+        "speaker": "Samrat Ghimire",
+        "text": "I think there are five steps. Will it be actually for all type of people because it may be different according to data."
+      },
+      {
+        "lineNumber": 208,
+        "timestamp": "39:42",
+        "speaker": "Pawan Pokharel",
+        "text": "And how are we actually using the data, not focused on physical assets, but actual data?"
+      },
+      {
+        "lineNumber": 209,
+        "timestamp": "39:48",
+        "speaker": "Kasam Thapa",
+        "text": "How are we using those data to convert into the numbers that convert into the decisions?"
+      },
+      {
+        "lineNumber": 210,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "Where is the social goal? in of Let's go. He's having mama, I guess. Okay, okay. So, so we are basically, we do have, I think, algorithm."
+      },
+      {
+        "lineNumber": 211,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "We could say formula as well, but there is algorithm because there are five steps, right? So, first of all, we are going to calculate the monthly basis of money or more, okay, the money that came from Isheba or statement, right?"
+      },
+      {
+        "lineNumber": 212,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "Monthly statement, and we're going to multiply it with 60 or something like that. So we can find that whether they are going to pay or able to pay the interest or not, okay?"
+      },
+      {
+        "lineNumber": 213,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "This is the first step. And second one is psychological question. The more they can answer or the better answer, they are going to get a better score, okay?"
+      },
+      {
+        "lineNumber": 214,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "And the third one is the vows. The more vows, they got. more we are. They got more credit score."
+      },
+      {
+        "lineNumber": 215,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "So this is all three formula and with that, you know, integrating all these three formula, we will get a total credit score at last."
+      },
+      {
+        "lineNumber": 216,
+        "timestamp": "39:57",
+        "speaker": "Samrat Ghimire",
+        "text": "Where did you go Pawan? Is your internet not stable or what? First, now that little bit problem at my internet."
+      },
+      {
+        "lineNumber": 217,
+        "timestamp": "41:23",
+        "speaker": "Pawan Pokharel",
+        "text": "Okay. Okay."
+      },
+      {
+        "lineNumber": 218,
+        "timestamp": "41:24",
+        "speaker": "Samrat Ghimire",
+        "text": "So are you sure that we're going to definitely want this thing? Yeah. We have to make mindset like that."
+      },
+      {
+        "lineNumber": 219,
+        "timestamp": "41:32",
+        "speaker": "Pawan Pokharel",
+        "text": "We will definitely. Yeah. I think Kasam gone."
+      },
+      {
+        "lineNumber": 220,
+        "timestamp": "41:39",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah. I'm the only one who have a great, you know, that internet."
+      },
+      {
+        "lineNumber": 221,
+        "timestamp": "41:42",
+        "speaker": "Pawan Pokharel",
+        "text": "You are the best. You have the best mindset, idea, and thinking capability. You are the best. And what is this Kasam hand-on notator?"
+      },
+      {
+        "lineNumber": 222,
+        "timestamp": "41:42",
+        "speaker": "Pawan Pokharel",
+        "text": "Oh, it's a notetaker. AI notetaker."
+      },
+      {
+        "lineNumber": 223,
+        "timestamp": "41:55",
+        "speaker": "Samrat Ghimire",
+        "text": "He will, you know, it will make a note as we are talking. saying are"
+      },
+      {
+        "lineNumber": 224,
+        "timestamp": "42:00",
+        "speaker": "Pawan Pokharel",
+        "text": "Okay, I think these things work properly, but I don't know."
+      },
+      {
+        "lineNumber": 225,
+        "timestamp": "42:10",
+        "speaker": "Samrat Ghimire",
+        "text": "Yeah, that is why I think you make us come in this zoom or whatsoever. I need to test whether this is good or not note taker."
+      },
+      {
+        "lineNumber": 226,
+        "timestamp": "42:18",
+        "speaker": "Pawan Pokharel",
+        "text": "Yeah."
+      },
+      {
+        "lineNumber": 227,
+        "timestamp": "42:20",
+        "speaker": "Samrat Ghimire",
+        "text": "And we have been talking for one hour, bro. My mouth is just..."
+      },
+      {
+        "lineNumber": 228,
+        "timestamp": "42:25",
+        "speaker": "Pawan Pokharel",
+        "text": "You say about two minutes and it's one hour. You say that we're going to do this for five or two minutes and it's been one hour, bro."
+      },
+      {
+        "lineNumber": 229,
+        "timestamp": "42:34",
+        "speaker": "Samrat Ghimire",
+        "text": "For what? Talking. For two minutes, you are saying it's already one hour."
+      },
+      {
+        "lineNumber": 230,
+        "timestamp": "42:40",
+        "speaker": "Pawan Pokharel",
+        "text": "Our time is still. What? Sissip what?"
+      },
+      {
+        "lineNumber": 231,
+        "timestamp": "42:48",
+        "speaker": "Samrat Ghimire",
+        "text": "We can come to our native language."
+      },
+      {
+        "lineNumber": 232,
+        "timestamp": "42:53",
+        "speaker": "Pawan Pokharel",
+        "text": "No."
+      },
+      {
+        "lineNumber": 233,
+        "timestamp": "42:54",
+        "speaker": "Kasam Thapa",
+        "text": "Okay."
+      },
+      {
+        "lineNumber": 234,
+        "timestamp": "42:55",
+        "speaker": "Samrat Ghimire",
+        "text": "So to sum up... Yeah, wrap up the things."
+      },
+      {
+        "lineNumber": 235,
+        "timestamp": "43:01",
+        "speaker": "Pawan Pokharel",
+        "text": "Okay, let's wrap up the official meeting, so that's all for all the time, so thank you everyone, and I hope everyone will keep their best and contribute as much as they can."
+      },
+      {
+        "lineNumber": 236,
+        "timestamp": "43:01",
+        "speaker": "Pawan Pokharel",
+        "text": "We may not win, but we will win."
+      },
+      {
+        "lineNumber": 237,
+        "timestamp": "43:23",
+        "speaker": "Samrat Ghimire",
+        "text": "I am definitely sure that we are going to win our own track, and we will do our best to win the main thing as well, so yeah."
+      },
+      {
+        "lineNumber": 238,
+        "timestamp": "43:33",
+        "speaker": "Pawan Pokharel",
+        "text": "Guys, don't be motivated. We are here to run, not to win. Don't be motivated. Be motivated."
+      },
+      {
+        "lineNumber": 239,
+        "timestamp": "43:43",
+        "speaker": "Samrat Ghimire",
+        "text": "We have a great product, we have a great people, we have a great mindset."
+      },
+      {
+        "lineNumber": 240,
+        "timestamp": "43:48",
+        "speaker": "Pawan Pokharel",
+        "text": "You want us to be demotivated, Pawan Pokharel? Huh? You want us to be demotivated? Yeah, I am giving you motivations, and you are saying we have..."
+      },
+      {
+        "lineNumber": 241,
+        "timestamp": "43:48",
+        "speaker": "Pawan Pokharel",
+        "text": "We are here to learn, bro. So, what? We are here to learn, so don't think about winning. We are here to win."
+      },
+      {
+        "lineNumber": 242,
+        "timestamp": "43:48",
+        "speaker": "Pawan Pokharel",
+        "text": "We are here to learn. Okay, that's the Pawan mindset."
+      },
+      {
+        "lineNumber": 243,
+        "timestamp": "44:21",
+        "speaker": "Samrat Ghimire",
+        "text": "You just want to learn everything. Learning is a good thing."
+      },
+      {
+        "lineNumber": 244,
+        "timestamp": "44:25",
+        "speaker": "Pawan Pokharel",
+        "text": "My one thing I want to talk to Mr. Pawan Pokharel is that if you think you are just here to learn and I may not win, I know, but at least I will learn, you will never win."
+      },
+      {
+        "lineNumber": 245,
+        "timestamp": "44:25",
+        "speaker": "Pawan Pokharel",
+        "text": "No, bro. Your mindset is too Wait, wait, wait, wait for a second. I don't like your things. Let me speak."
+      },
+      {
+        "lineNumber": 246,
+        "timestamp": "44:25",
+        "speaker": "Pawan Pokharel",
+        "text": "But if you come with the winning mindset, I will give my best."
+      },
+      {
+        "lineNumber": 247,
+        "timestamp": "44:50",
+        "speaker": "Kasam Thapa",
+        "text": "I will give everything I've got."
+      },
+      {
+        "lineNumber": 248,
+        "timestamp": "44:53",
+        "speaker": "Pawan Pokharel",
+        "text": "You will eventually learn more than you will learn when you had that idea. But even if you don't win."
+      },
+      {
+        "lineNumber": 249,
+        "timestamp": "44:53",
+        "speaker": "Pawan Pokharel",
+        "text": "If don't get the first place, you will at least get second or third position. Bring your winning mindset, not a loser mindset."
+      },
+      {
+        "lineNumber": 250,
+        "timestamp": "44:53",
+        "speaker": "Pawan Pokharel",
+        "text": "Why? I am saying that we are losing. I am saying we are lose. We will lose. No, we are tight."
+      },
+      {
+        "lineNumber": 251,
+        "timestamp": "44:53",
+        "speaker": "Pawan Pokharel",
+        "text": "I am saying that we will lose."
+      },
+      {
+        "lineNumber": 252,
+        "timestamp": "45:18",
+        "speaker": "Samrat Ghimire",
+        "text": "We will to Hathom, will lose. You do not need to be the person who will say that we are going to learn the thing, are not going to learn the thing."
+      },
+      {
+        "lineNumber": 253,
+        "timestamp": "45:18",
+        "speaker": "Samrat Ghimire",
+        "text": "Because whenever you start your step into that college, you start learning. Yeah, because with your winning mindset, you will try to do everything at best."
+      },
+      {
+        "lineNumber": 254,
+        "timestamp": "45:40",
+        "speaker": "Pawan Pokharel",
+        "text": "You will choose every best thing. Okay, guys, let's conclude. Let's conclude. Concluding that, we have some contradiction with each other."
+      },
+      {
+        "lineNumber": 255,
+        "timestamp": "45:51",
+        "speaker": "Samrat Ghimire",
+        "text": "That's best of Hackathon. I miss that. What mindset we have, and I hope we bring more..."
+      },
+      {
+        "lineNumber": 256,
+        "timestamp": "46:00",
+        "speaker": "Pawan Pokharel",
+        "text": "There's contradiction to the idea even in the hackathon time. more the contradiction, better the product as we have seen in the previous hackathons."
+      },
+      {
+        "lineNumber": 257,
+        "timestamp": "46:08",
+        "speaker": "Samrat Ghimire",
+        "text": "We may feel like we're losing behind, people may not understand and they may try to contradict, fight, that's wrong, but that's the best thing that can happen to the project and to us."
+      },
+      {
+        "lineNumber": 258,
+        "timestamp": "46:08",
+        "speaker": "Samrat Ghimire",
+        "text": "Because that's how we are going to make this thing best. Yeah, do you agree or not, Samrat? Absolutely, absolutely, certainly."
+      },
+      {
+        "lineNumber": 259,
+        "timestamp": "46:08",
+        "speaker": "Samrat Ghimire",
+        "text": "That is what we're going to do. The more, you know, the more that phone or the more the wall there is within our, you know, progress, the better we learn and that's what's going to warn us."
+      },
+      {
+        "lineNumber": 260,
+        "timestamp": "46:08",
+        "speaker": "Samrat Ghimire",
+        "text": "One thing, one thing, we don't use mentors in the right way because we just try to avoid mentors in our hackathons and even in last hackathons, try to avoid."
+      },
+      {
+        "lineNumber": 261,
+        "timestamp": "46:08",
+        "speaker": "Samrat Ghimire",
+        "text": "But, but he also teeth. Fortunately, just came by himself."
+      },
+      {
+        "lineNumber": 262,
+        "timestamp": "47:04",
+        "speaker": "Pawan Pokharel",
+        "text": "Even though we avoided them, he came and he contracted with our idea about how our system is failing and that helped us and pushed us to beyond limits to improve ourselves and to answer what his limitations were."
+      },
+      {
+        "lineNumber": 263,
+        "timestamp": "47:04",
+        "speaker": "Pawan Pokharel",
+        "text": "So on this hackathon, let's use mentors as much as possible. Let's talk to each mentors that arrive and then convert our idea."
+      },
+      {
+        "lineNumber": 264,
+        "timestamp": "47:31",
+        "speaker": "Samrat Ghimire",
+        "text": "Let's not change our decision on the idea or our project. We'll just change everything that they are giving us."
+      },
+      {
+        "lineNumber": 265,
+        "timestamp": "47:31",
+        "speaker": "Samrat Ghimire",
+        "text": "Not the decision. They may question our project. They may question our decisions. And then we won't deviate from our actual project, but we will make our project into something that will answer their question, their contradiction."
+      },
+      {
+        "lineNumber": 266,
+        "timestamp": "47:56",
+        "speaker": "Kasam Thapa",
+        "text": "So we're not running away from actual project."
+      },
+      {
+        "lineNumber": 267,
+        "timestamp": "48:00",
+        "speaker": "Samrat Ghimire",
+        "text": "But building it in a way that defends their question and wins over their questions too."
+      },
+      {
+        "lineNumber": 268,
+        "timestamp": "48:05",
+        "speaker": "Pawan Pokharel",
+        "text": "So let's use mentors as much as possible. Let's talk with them. Let's ask them what are limitations to our and what our box to our project and what type of critical things you see in our system like what we lack."
+      },
+      {
+        "lineNumber": 269,
+        "timestamp": "48:05",
+        "speaker": "Pawan Pokharel",
+        "text": "So let's use mentors as much as possible even in the first day. Because on the second part, we can work on that because in the last episode, we ran into the mentor and the contradictions on the last, on words of last time."
+      },
+      {
+        "lineNumber": 270,
+        "timestamp": "48:38",
+        "speaker": "Samrat Ghimire",
+        "text": "So it was too much mental pressure for us, right? So let's do this thing even in the first day."
+      },
+      {
+        "lineNumber": 271,
+        "timestamp": "48:46",
+        "speaker": "Pawan Pokharel",
+        "text": "let's talk about the That's a great strategy."
+      },
+      {
+        "lineNumber": 272,
+        "timestamp": "48:51",
+        "speaker": "Samrat Ghimire",
+        "text": "We talked about planning and executing in the first day."
+      },
+      {
+        "lineNumber": 273,
+        "timestamp": "48:56",
+        "speaker": "Kasam Thapa",
+        "text": "And we tried to focus more on planning, but after planning. So let's give all our time in that day to mentors and talk with them, interact with them all day."
+      },
+      {
+        "lineNumber": 274,
+        "timestamp": "49:05",
+        "speaker": "Pawan Pokharel",
+        "text": "Okay, Pawan Pokharel. Okay, that's the great idea you have talking about, bro."
+      },
+      {
+        "lineNumber": 275,
+        "timestamp": "49:11",
+        "speaker": "Samrat Ghimire",
+        "text": "I really like you, like your idea. That's mind-blowing."
+      },
+      {
+        "lineNumber": 276,
+        "timestamp": "49:19",
+        "speaker": "Kasam Thapa",
+        "text": "That's enough."
+      },
+      {
+        "lineNumber": 277,
+        "timestamp": "49:20",
+        "speaker": "Pawan Pokharel",
+        "text": "Anything to say? Really enough. Anything to say, Samrat?"
+      },
+      {
+        "lineNumber": 278,
+        "timestamp": "49:24",
+        "speaker": "Kasam Thapa",
+        "text": "Nothing, bro."
+      },
+      {
+        "lineNumber": 279,
+        "timestamp": "49:25",
+        "speaker": "Samrat Ghimire",
+        "text": "Just need to end this session. That's all. Okay, that's all. And we have a great session. Thank you, Mr."
+      },
+      {
+        "lineNumber": 280,
+        "timestamp": "49:25",
+        "speaker": "Samrat Ghimire",
+        "text": "Pawan Pokharel."
+      },
+      {
+        "lineNumber": 281,
+        "timestamp": "49:32",
+        "speaker": "Kasam Thapa",
+        "text": "Thank you, Samrat Ghimire."
+      },
+      {
+        "lineNumber": 282,
+        "timestamp": "49:33",
+        "speaker": "Pawan Pokharel",
+        "text": "Thank you, Samrat. you, Samrat. Thank you, Samrat. Let's wrap this meeting up and I'll see and we'll see each other in the hackathon the day after tomorrow on Friday."
+      },
+      {
+        "lineNumber": 283,
+        "timestamp": "49:33",
+        "speaker": "Pawan Pokharel",
+        "text": "So, best of luck for us. See you once again."
+      },
+      {
+        "lineNumber": 284,
+        "timestamp": "49:48",
+        "speaker": "Samrat Ghimire",
+        "text": "Bye. Bye-bye."
+      }
+    ]
   }
 }

@@ -20,7 +20,7 @@ function isEvidenceVerified(
 export function verifyEvidence(
   result: LlmMeetingResult,
   lines: ParsedLine[],
-): Omit<MeetingResult, "meta"> {
+): Omit<MeetingResult, "meta" | "transcriptLines"> {
   return {
     ...result,
     decisions: result.decisions.map((d) => ({

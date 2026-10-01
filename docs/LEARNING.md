@@ -74,3 +74,17 @@ just an in-memory lookup — no disk I/O, and nothing to race if two requests ar
 Rejecting a URL param against a strict `a-z0-9-` regex before using it as a lookup key blocks
 path-traversal-shaped ids (like `../../etc/passwd`) with a clean 400 — the check happens before
 the value is ever used to touch storage, not after something has already gone wrong.
+
+TypeScript's `Omit<Type, "a" | "b">` can subtract more than one key at a time —
+useful when a helper function (`verifyEvidence`) builds most of a bigger type but
+one more field (`transcriptLines`) gets attached later by its caller, so the
+helper's return type only promises what it actually produces.
+
+With no shared package between `client/` and `server/`, "the types match" is only
+true because a human kept them in sync by hand — the compiler can't catch a client
+type drifting from the server's actual shape, which is why the client file is
+literally copy-pasted and commented as a mirror rather than reinvented from memory.
+
+A custom `ApiError` class carrying the HTTP `status` (and `status: 0` for a network
+failure that never got a response) lets calling UI code branch on `err.status`
+instead of fragile string-matching on `err.message` to decide what to show the user.
