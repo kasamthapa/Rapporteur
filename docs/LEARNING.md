@@ -58,3 +58,11 @@ Trusting a string match is not the same as trusting the data: `evidenceQuote` on
 "verified" after the server independently re-reads the transcript line the model claimed
 and confirms the exact text is really there — the model asserting a line number proves nothing
 on its own.
+
+A seed script calling `analyzeMeeting()` directly (instead of hitting `POST /meetings` over
+HTTP) reuses the exact same code path the live server runs, so the cached seed JSON can never
+drift out of shape from what a real request would produce.
+
+Checking "does the output file already exist" before spending a billed API call is a cheap,
+file-system-only guard that makes a multi-step script safely re-runnable — a crash on entry 3
+of 5 means re-running only redoes entry 3 onward, instead of re-paying for 1 and 2 again.
