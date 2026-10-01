@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MeetingsList } from "./components/MeetingsList";
+import { MeetingView } from "./components/MeetingView";
 import { NewMeetingForm } from "./components/NewMeetingForm";
 import type { CreateMeetingResponse } from "./api/meetings";
 
@@ -38,8 +39,18 @@ function App() {
           <NewMeetingForm onCreated={(created) => setView({ kind: "created", created })} />
         )}
 
-        {(view.kind === "meeting" || view.kind === "created") && (
-          <div>Meeting view coming next</div>
+        {view.kind === "meeting" && (
+          <MeetingView
+            source={{ kind: "id", id: view.meetingId }}
+            onBack={() => setView({ kind: "list" })}
+          />
+        )}
+
+        {view.kind === "created" && (
+          <MeetingView
+            source={{ kind: "result", id: view.created.id, result: view.created.result }}
+            onBack={() => setView({ kind: "list" })}
+          />
         )}
       </main>
     </div>
