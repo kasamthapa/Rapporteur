@@ -119,13 +119,13 @@ function VerifiedBadge({ verified }: { verified: boolean }) {
   if (verified) {
     return (
       <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-0.5 text-xs font-medium text-green-800">
-        Verified quote
+        Exact words found
       </span>
     );
   }
   return (
     <span className="inline-flex items-center rounded-full bg-amber-50 px-2 py-0.5 text-xs font-medium text-amber-800">
-      Unverified: quote not found on the cited line
+      Words don't match this line - check the transcript
     </span>
   );
 }
@@ -134,13 +134,13 @@ function StatusBadge({ status }: { status: ActionItem["status"] }) {
   if (status === "committed") {
     return (
       <span className="inline-flex items-center rounded-full bg-teal-50 px-2 py-0.5 text-xs font-medium text-teal-800">
-        Committed
+        Agreed
       </span>
     );
   }
   return (
     <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700">
-      Suggested
+      Proposed
     </span>
   );
 }
@@ -156,23 +156,27 @@ function LineButton({
   isHighlighted: boolean;
   onClick: (lineNumber: number) => void;
 }) {
-  const label = line
+  const titleLabel = line
     ? `Line ${evidence.sourceLine} - ${line.speaker} - ${line.timestamp}`
     : `Line ${evidence.sourceLine}`;
+  const visibleLabel = line
+    ? `Show in transcript · ${line.timestamp} · ${line.speaker}`
+    : `Show in transcript`;
 
   return (
     <button
       type="button"
       onClick={() => onClick(evidence.sourceLine)}
       aria-pressed={isHighlighted}
-      aria-label={`${label} — scroll transcript to this line`}
+      title={titleLabel}
+      aria-label={`${titleLabel} — scroll transcript to this line`}
       className={`inline-flex items-center gap-1 rounded-md border px-2 py-1 text-xs font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-1 ${
         isHighlighted
           ? "border-teal-600 bg-teal-50 text-teal-800"
           : "border-gray-300 bg-white text-gray-700 hover:bg-gray-50"
       }`}
     >
-      {label}
+      {visibleLabel}
     </button>
   );
 }
@@ -301,9 +305,15 @@ function MeetingContent({ title, createdAt, result }: MeetingContentProps) {
         <p className="mt-1 text-sm text-gray-500">{formatDateTime(createdAt)}</p>
         <p className="mt-2 text-sm font-medium text-gray-700">
           {totalClaims > 0
-            ? `${result.meta.verifiedCount} of ${totalClaims} claims verified`
+            ? `${result.meta.verifiedCount} of ${totalClaims} quotes found word for word`
             : "No verifiable claims in this meeting"}
         </p>
+        {totalClaims > 0 && (
+          <p className="mt-1 text-xs text-gray-500">
+            Exact words found means the quote appears word for word on the line it cites. It
+            does not prove the claim is true.
+          </p>
+        )}
         {result.agendaInferred && (
           <p className="mt-3 inline-flex items-center rounded-md bg-blue-50 px-3 py-1.5 text-sm text-blue-800">
             Agenda was inferred by the AI
