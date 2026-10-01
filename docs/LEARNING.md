@@ -88,3 +88,12 @@ literally copy-pasted and commented as a mirror rather than reinvented from memo
 A custom `ApiError` class carrying the HTTP `status` (and `status: 0` for a network
 failure that never got a response) lets calling UI code branch on `err.status`
 instead of fragile string-matching on `err.message` to decide what to show the user.
+
+Modeling `view` as a discriminated union (`{kind: "list"} | {kind: "new"} | ...`)
+instead of separate booleans means React can never render two "screens" at once —
+there's exactly one `view.kind` at a time, so the UI can't drift into an
+inconsistent state like "form submitting" and "showing results" simultaneously.
+
+A controlled `<input>` whose `value` comes from React state (not the DOM) is what
+makes a "Try a sample" button work by just calling `setState` — the input re-renders
+with the new value automatically, with no manual DOM manipulation needed.

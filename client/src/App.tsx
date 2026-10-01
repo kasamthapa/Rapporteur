@@ -1,7 +1,47 @@
+import { useState } from "react";
+import { MeetingsList } from "./components/MeetingsList";
+import { NewMeetingForm } from "./components/NewMeetingForm";
+import type { CreateMeetingResponse } from "./api/meetings";
+
+type View =
+  | { kind: "list" }
+  | { kind: "new" }
+  | { kind: "meeting"; meetingId: string }
+  | { kind: "created"; created: CreateMeetingResponse };
+
 function App() {
+  const [view, setView] = useState<View>({ kind: "list" });
+
   return (
-    <div className="min-h-screen bg-gray-50 p-4 text-gray-900">
-      <h1 className="text-2xl font-semibold">Rapporteur</h1>
+    <div className="min-h-screen bg-gray-50 text-gray-900">
+      <header className="border-b border-gray-200 bg-white">
+        <div className="mx-auto max-w-3xl px-4 py-3">
+          <button
+            type="button"
+            onClick={() => setView({ kind: "list" })}
+            className="text-lg font-semibold text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-600 focus-visible:ring-offset-2"
+          >
+            Rapporteur
+          </button>
+        </div>
+      </header>
+
+      <main>
+        {view.kind === "list" && (
+          <MeetingsList
+            onOpenMeeting={(meetingId) => setView({ kind: "meeting", meetingId })}
+            onNewMeeting={() => setView({ kind: "new" })}
+          />
+        )}
+
+        {view.kind === "new" && (
+          <NewMeetingForm onCreated={(created) => setView({ kind: "created", created })} />
+        )}
+
+        {(view.kind === "meeting" || view.kind === "created") && (
+          <div>Meeting view coming next</div>
+        )}
+      </main>
     </div>
   );
 }
